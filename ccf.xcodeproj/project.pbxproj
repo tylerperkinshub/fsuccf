@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1A56698971FB5AA81BADE5 /* Pods_ccf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */; };
 		8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E66A28736C8400466E07 /* ccfApp.swift */; };
 		8E16E66F28736C8600466E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E66E28736C8600466E07 /* Assets.xcassets */; };
 		8E16E67228736C8600466E07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E67128736C8600466E07 /* Preview Assets.xcassets */; };
@@ -24,9 +25,13 @@
 		8E16E6992873783400466E07 /* AnnouncementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6982873783400466E07 /* AnnouncementsCell.swift */; };
 		8E16E69B2873784500466E07 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E69A2873784500466E07 /* ScheduleCell.swift */; };
 		8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E69D2873789A00466E07 /* CCFLabel.swift */; };
+		8E16E6A22873D43300466E07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E6A12873D43300466E07 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B9F5F320B327E7427B40C6D /* Pods-ccf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ccf.release.xcconfig"; path = "Target Support Files/Pods-ccf/Pods-ccf.release.xcconfig"; sourceTree = "<group>"; };
+		6E9B33EBACA35EA5248DE8CD /* Pods-ccf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ccf.debug.xcconfig"; path = "Target Support Files/Pods-ccf/Pods-ccf.debug.xcconfig"; sourceTree = "<group>"; };
+		84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ccf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E16E66728736C8400466E07 /* ccf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ccf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E16E66A28736C8400466E07 /* ccfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfApp.swift; sourceTree = "<group>"; };
 		8E16E66E28736C8600466E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		8E16E6982873783400466E07 /* AnnouncementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsCell.swift; sourceTree = "<group>"; };
 		8E16E69A2873784500466E07 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		8E16E69D2873789A00466E07 /* CCFLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFLabel.swift; sourceTree = "<group>"; };
+		8E16E6A12873D43300466E07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1A56698971FB5AA81BADE5 /* Pods_ccf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +70,8 @@
 			children = (
 				8E16E66928736C8400466E07 /* ccf */,
 				8E16E66828736C8400466E07 /* Products */,
+				F7FD02689BA21E9812AF2D81 /* Pods */,
+				9E7D64D45C96E6A7FA881FDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +92,7 @@
 				8E16E680287372C000466E07 /* Views */,
 				8E16E66A28736C8400466E07 /* ccfApp.swift */,
 				8E16E66E28736C8600466E07 /* Assets.xcassets */,
+				8E16E6A12873D43300466E07 /* GoogleService-Info.plist */,
 				8E16E67028736C8600466E07 /* Preview Content */,
 			);
 			path = ccf;
@@ -170,6 +180,24 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		9E7D64D45C96E6A7FA881FDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7FD02689BA21E9812AF2D81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E9B33EBACA35EA5248DE8CD /* Pods-ccf.debug.xcconfig */,
+				1B9F5F320B327E7427B40C6D /* Pods-ccf.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E16E67528736C8600466E07 /* Build configuration list for PBXNativeTarget "ccf" */;
 			buildPhases = (
+				627C9A3E28D9528EDED6CBCF /* [CP] Check Pods Manifest.lock */,
 				8E16E66328736C8400466E07 /* Sources */,
 				8E16E66428736C8400466E07 /* Frameworks */,
 				8E16E66528736C8400466E07 /* Resources */,
+				E74C3D21885A8E5169CF86A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,10 +260,53 @@
 			files = (
 				8E16E67228736C8600466E07 /* Preview Assets.xcassets in Resources */,
 				8E16E66F28736C8600466E07 /* Assets.xcassets in Resources */,
+				8E16E6A22873D43300466E07 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		627C9A3E28D9528EDED6CBCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ccf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E74C3D21885A8E5169CF86A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ccf/Pods-ccf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ccf/Pods-ccf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ccf/Pods-ccf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E16E66328736C8400466E07 /* Sources */ = {
@@ -377,6 +450,7 @@
 		};
 		8E16E67628736C8600466E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E9B33EBACA35EA5248DE8CD /* Pods-ccf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,6 +480,7 @@
 		};
 		8E16E67728736C8600466E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B9F5F320B327E7427B40C6D /* Pods-ccf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
