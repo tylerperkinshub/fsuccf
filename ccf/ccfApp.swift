@@ -11,7 +11,7 @@ import SwiftUI
 struct ccfApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EventsView()
         }
     }
 }

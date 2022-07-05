@@ -8,17 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E66A28736C8400466E07 /* ccfApp.swift */; };
-		8E16E66D28736C8400466E07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E66C28736C8400466E07 /* ContentView.swift */; };
 		8E16E66F28736C8600466E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E66E28736C8600466E07 /* Assets.xcassets */; };
 		8E16E67228736C8600466E07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E67128736C8600466E07 /* Preview Assets.xcassets */; };
+		8E16E67B28736E3600466E07 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E67A28736E3600466E07 /* Event.swift */; };
+		8E16E67D28736E4000466E07 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E67C28736E4000466E07 /* Announcement.swift */; };
+		8E16E6862873756A00466E07 /* Scheduled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6852873756A00466E07 /* Scheduled.swift */; };
+		8E16E6882873758C00466E07 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6872873758C00466E07 /* EventsView.swift */; };
+		8E16E68A2873759800466E07 /* AnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6892873759800466E07 /* AnnouncementsView.swift */; };
+		8E16E68C287375AF00466E07 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E68B287375AF00466E07 /* ScheduleView.swift */; };
+		8E16E68E287375BA00466E07 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E68D287375BA00466E07 /* EventsViewModel.swift */; };
+		8E16E690287375D400466E07 /* AnnocementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E68F287375D400466E07 /* AnnocementsViewModel.swift */; };
+		8E16E692287375E100466E07 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E691287375E100466E07 /* ScheduleViewModel.swift */; };
+		8E16E6952873765400466E07 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6942873765400466E07 /* NetworkManager.swift */; };
+		8E16E6972873782800466E07 /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6962873782800466E07 /* EventsCell.swift */; };
+		8E16E6992873783400466E07 /* AnnouncementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E6982873783400466E07 /* AnnouncementsCell.swift */; };
+		8E16E69B2873784500466E07 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E69A2873784500466E07 /* ScheduleCell.swift */; };
+		8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E69D2873789A00466E07 /* CCFLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E16E66728736C8400466E07 /* ccf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ccf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E16E66A28736C8400466E07 /* ccfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfApp.swift; sourceTree = "<group>"; };
-		8E16E66C28736C8400466E07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E16E66E28736C8600466E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E16E67128736C8600466E07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8E16E67A28736E3600466E07 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8E16E67C28736E4000466E07 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		8E16E6852873756A00466E07 /* Scheduled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduled.swift; sourceTree = "<group>"; };
+		8E16E6872873758C00466E07 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		8E16E6892873759800466E07 /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
+		8E16E68B287375AF00466E07 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		8E16E68D287375BA00466E07 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		8E16E68F287375D400466E07 /* AnnocementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnocementsViewModel.swift; sourceTree = "<group>"; };
+		8E16E691287375E100466E07 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		8E16E6942873765400466E07 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8E16E6962873782800466E07 /* EventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
+		8E16E6982873783400466E07 /* AnnouncementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsCell.swift; sourceTree = "<group>"; };
+		8E16E69A2873784500466E07 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		8E16E69D2873789A00466E07 /* CCFLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +77,11 @@
 		8E16E66928736C8400466E07 /* ccf */ = {
 			isa = PBXGroup;
 			children = (
+				8E16E6932873764500466E07 /* Managers */,
+				8E16E67E28736E4400466E07 /* Model */,
+				8E16E67F287372B500466E07 /* Screens */,
+				8E16E680287372C000466E07 /* Views */,
 				8E16E66A28736C8400466E07 /* ccfApp.swift */,
-				8E16E66C28736C8400466E07 /* ContentView.swift */,
 				8E16E66E28736C8600466E07 /* Assets.xcassets */,
 				8E16E67028736C8600466E07 /* Preview Content */,
 			);
@@ -65,6 +94,80 @@
 				8E16E67128736C8600466E07 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8E16E67E28736E4400466E07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E67A28736E3600466E07 /* Event.swift */,
+				8E16E67C28736E4000466E07 /* Announcement.swift */,
+				8E16E6852873756A00466E07 /* Scheduled.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E16E67F287372B500466E07 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E682287372E500466E07 /* Events */,
+				8E16E683287372ED00466E07 /* Announcements */,
+				8E16E684287372F700466E07 /* Schedule */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8E16E680287372C000466E07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E69D2873789A00466E07 /* CCFLabel.swift */,
+				8E16E681287372C700466E07 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E16E681287372C700466E07 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E6962873782800466E07 /* EventsCell.swift */,
+				8E16E6982873783400466E07 /* AnnouncementsCell.swift */,
+				8E16E69A2873784500466E07 /* ScheduleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8E16E682287372E500466E07 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E68D287375BA00466E07 /* EventsViewModel.swift */,
+				8E16E6872873758C00466E07 /* EventsView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8E16E683287372ED00466E07 /* Announcements */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E68F287375D400466E07 /* AnnocementsViewModel.swift */,
+				8E16E6892873759800466E07 /* AnnouncementsView.swift */,
+			);
+			path = Announcements;
+			sourceTree = "<group>";
+		};
+		8E16E684287372F700466E07 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E691287375E100466E07 /* ScheduleViewModel.swift */,
+				8E16E68B287375AF00466E07 /* ScheduleView.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		8E16E6932873764500466E07 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8E16E6942873765400466E07 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +240,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E16E66D28736C8400466E07 /* ContentView.swift in Sources */,
+				8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */,
+				8E16E6972873782800466E07 /* EventsCell.swift in Sources */,
+				8E16E6952873765400466E07 /* NetworkManager.swift in Sources */,
+				8E16E67D28736E4000466E07 /* Announcement.swift in Sources */,
+				8E16E6862873756A00466E07 /* Scheduled.swift in Sources */,
+				8E16E6992873783400466E07 /* AnnouncementsCell.swift in Sources */,
+				8E16E68A2873759800466E07 /* AnnouncementsView.swift in Sources */,
+				8E16E690287375D400466E07 /* AnnocementsViewModel.swift in Sources */,
+				8E16E67B28736E3600466E07 /* Event.swift in Sources */,
+				8E16E692287375E100466E07 /* ScheduleViewModel.swift in Sources */,
+				8E16E68C287375AF00466E07 /* ScheduleView.swift in Sources */,
+				8E16E69B2873784500466E07 /* ScheduleCell.swift in Sources */,
+				8E16E68E287375BA00466E07 /* EventsViewModel.swift in Sources */,
 				8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */,
+				8E16E6882873758C00466E07 /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
