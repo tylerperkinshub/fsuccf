@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 struct EventsView: View {
     var body: some View {
