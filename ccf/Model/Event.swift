@@ -7,17 +7,39 @@
 
 import UIKit
 
-struct Event {
+struct Event: Identifiable {
     
     let id = UUID()
-    let name: String
-    let image: UIImage
+    let title: String
+    let image: String
+    let time: String?
     let createdBy: String
-    let date: String
+    let eventDate: String
+    let location: String
     let publishDate: String
     let series: String?
-    let cost: Double?
+    let cost: Int?
     let registerURL: String?
-    let description: String
+    let description: String?
     
 }
+
+
+
+struct MockData {
+    
+    static let event = Event(title: "First Monday Night", image: "background", time: "7pm", createdBy: "Kane", eventDate: "08/23/2021", location: "925 W. Jefferson", publishDate: "08/14/2021", series: nil, cost: nil, registerURL: nil, description: "Bible study, Music, Free Food, Great Community")
+    
+    
+    static let events = [
+        Event(title: "First Monday Night", image: "FMN08-23-21", time: "7pm", createdBy: "Kane", eventDate: "08/23/2021", location: "925 W. Jefferson", publishDate: "08/14/2021", series: nil, cost: nil, registerURL: nil, description: "Bible study, Music, Free Food, Great Community"),
+        Event(title: "Last Monday Night", image: "LMN04-18-22", time: "7pm", createdBy: "Kane", eventDate: "04/18/2021", location: "925 W. Jefferson", publishDate: "08/14/2021", series: nil, cost: nil, registerURL: nil, description: "Bible study, Music, Free Food, Great Community"),
+        Event(title: "CCF Beach Trip", image: "BeachTrip08-31-21", time: nil, createdBy: "Kane", eventDate: "10/08/2021", location: "925 W. Jefferson", publishDate: "09/07/2021", series: nil, cost: 75, registerURL: "fsuccf.com/beach", description: "This is going to be a weekend trip to the beach. It's a time to get to k now one another."),
+        Event(title: "Welcome Back Picnic", image: "Picnic08-19-21", time: "12pm", createdBy: "Kane", eventDate: "08/21/2021", location: "Langford Green", publishDate: "08/08/2021", series: nil, cost: nil, registerURL: nil, description: "Picnic")
+    ]
+}
+
+
+
+
+
