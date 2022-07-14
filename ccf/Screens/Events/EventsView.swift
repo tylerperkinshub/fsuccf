@@ -12,11 +12,35 @@ import FirebaseCore
 struct EventsView: View {
     
 
+    @StateObject var viewModel = EventsViewModel()
 
     
     var body: some View {
+        
+        NavigationView {
+            ScrollView{
+                
+                LazyVGrid(columns: viewModel.columns) {
+                    ForEach(MockData.events) { event in
+                        EventsCell(event: event)
+                            .onTapGesture {
+                                viewModel.selectedEvent = event
+                            }
+                        
+                    }
+                }
+
+            }
+            .navigationTitle("Upcoming Events")
+            .sheet(isPresented: $viewModel.isShowingDetailView) {
+                EventDetails(
+                    event: viewModel.selectedEvent!,
+                    isShowingDetailView: $viewModel.isShowingDetailView)
+            }
+        }
+
+        
  
-        EventsCell(event: MockData.event)
         
     }
 }
@@ -24,6 +48,6 @@ struct EventsView: View {
 struct EventsView_Previews: PreviewProvider {
     static var previews: some View {
         EventsView()
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
     }
 }

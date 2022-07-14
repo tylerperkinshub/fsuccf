@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
+
+final class EventsViewModel: ObservableObject {
+    
+    var selectedEvent: Event? {
+        didSet { isShowingDetailView = true }
+    }
+    
+    @Published var isShowingDetailView = false
+    
+    let columns: [GridItem] = [GridItem(.flexible())]
+    
+    
+}

@@ -26,6 +26,10 @@
 		8E16E69B2873784500466E07 /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E69A2873784500466E07 /* ScheduleCell.swift */; };
 		8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E69D2873789A00466E07 /* CCFLabel.swift */; };
 		8E16E6A22873D43300466E07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E6A12873D43300466E07 /* GoogleService-Info.plist */; };
+		8E3B58F7287F682A007883DD /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B58F6287F6829007883DD /* EventDetails.swift */; };
+		8E3B58F9287F683A007883DD /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B58F8287F683A007883DD /* EventDetailsViewModel.swift */; };
+		8E3B58FC287F9174007883DD /* CCFDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B58FB287F9174007883DD /* CCFDismissButton.swift */; };
+		8E52465D28807DA3006E3D8D /* CCFTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52465C28807DA3006E3D8D /* CCFTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		8E16E69A2873784500466E07 /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
 		8E16E69D2873789A00466E07 /* CCFLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFLabel.swift; sourceTree = "<group>"; };
 		8E16E6A12873D43300466E07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8E3B58F6287F6829007883DD /* EventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
+		8E3B58F8287F683A007883DD /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		8E3B58FB287F9174007883DD /* CCFDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFDismissButton.swift; sourceTree = "<group>"; };
+		8E52465C28807DA3006E3D8D /* CCFTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +127,11 @@
 		8E16E67F287372B500466E07 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				8E52465B28807D7F006E3D8D /* CCFTabView */,
 				8E16E682287372E500466E07 /* Events */,
 				8E16E683287372ED00466E07 /* Announcements */,
 				8E16E684287372F700466E07 /* Schedule */,
+				8E3B58F5287F6813007883DD /* EventDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -129,6 +139,7 @@
 		8E16E680287372C000466E07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E3B58FA287F9151007883DD /* Buttons */,
 				8E16E69D2873789A00466E07 /* CCFLabel.swift */,
 				8E16E681287372C700466E07 /* Cells */,
 			);
@@ -180,6 +191,31 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		8E3B58F5287F6813007883DD /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8E3B58F8287F683A007883DD /* EventDetailsViewModel.swift */,
+				8E3B58F6287F6829007883DD /* EventDetails.swift */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
+		8E3B58FA287F9151007883DD /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8E3B58FB287F9174007883DD /* CCFDismissButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		8E52465B28807D7F006E3D8D /* CCFTabView */ = {
+			isa = PBXGroup;
+			children = (
+				8E52465C28807DA3006E3D8D /* CCFTabView.swift */,
+			);
+			path = CCFTabView;
+			sourceTree = "<group>";
+		};
 		9E7D64D45C96E6A7FA881FDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +230,6 @@
 				6E9B33EBACA35EA5248DE8CD /* Pods-ccf.debug.xcconfig */,
 				1B9F5F320B327E7427B40C6D /* Pods-ccf.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -313,18 +348,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E3B58F9287F683A007883DD /* EventDetailsViewModel.swift in Sources */,
 				8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */,
 				8E16E6972873782800466E07 /* EventsCell.swift in Sources */,
 				8E16E6952873765400466E07 /* NetworkManager.swift in Sources */,
 				8E16E67D28736E4000466E07 /* Announcement.swift in Sources */,
 				8E16E6862873756A00466E07 /* Scheduled.swift in Sources */,
+				8E3B58F7287F682A007883DD /* EventDetails.swift in Sources */,
 				8E16E6992873783400466E07 /* AnnouncementsCell.swift in Sources */,
 				8E16E68A2873759800466E07 /* AnnouncementsView.swift in Sources */,
 				8E16E690287375D400466E07 /* AnnocementsViewModel.swift in Sources */,
 				8E16E67B28736E3600466E07 /* Event.swift in Sources */,
+				8E3B58FC287F9174007883DD /* CCFDismissButton.swift in Sources */,
 				8E16E692287375E100466E07 /* ScheduleViewModel.swift in Sources */,
 				8E16E68C287375AF00466E07 /* ScheduleView.swift in Sources */,
 				8E16E69B2873784500466E07 /* ScheduleCell.swift in Sources */,
+				8E52465D28807DA3006E3D8D /* CCFTabView.swift in Sources */,
 				8E16E68E287375BA00466E07 /* EventsViewModel.swift in Sources */,
 				8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */,
 				8E16E6882873758C00466E07 /* EventsView.swift in Sources */,

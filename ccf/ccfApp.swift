@@ -25,7 +25,7 @@ struct ccfApp: App {
         
     var body: some Scene {
         WindowGroup {
-            EventsView()
+            CCFTabView()
         }
     }
 }

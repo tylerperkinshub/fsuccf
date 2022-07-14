@@ -40,8 +40,6 @@ struct EventsCell: View {
                 .foregroundColor(Color.white)
             }
 
-                
-            
             
         }
         .cornerRadius(12)
