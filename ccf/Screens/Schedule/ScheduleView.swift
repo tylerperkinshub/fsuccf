@@ -13,8 +13,12 @@ struct ScheduleView: View {
     
     var body: some View {
         ZStack {
+            
             NavigationView {
+                
+
                 List(viewModel.scheduledEvents) { event in
+                    
                     ScheduleCell(event: event)
                 }
                 .frame(maxWidth: .infinity)
@@ -22,6 +26,9 @@ struct ScheduleView: View {
                 .listStyle(.grouped)
                 .navigationTitle(Text("Schedule"))
                 .background(Color("ccfBackground"))
+            }
+            .onAppear() {
+                self.viewModel.getScheduledEvents()
             }
         }
     }
