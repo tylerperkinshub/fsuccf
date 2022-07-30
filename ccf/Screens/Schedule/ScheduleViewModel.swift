@@ -32,4 +32,8 @@ final class ScheduleViewModel: ObservableObject {
         }
     }
     
+    func delete(at offsets: IndexSet) {
+        
+    }
+    
 }

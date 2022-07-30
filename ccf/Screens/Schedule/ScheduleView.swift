@@ -11,25 +11,42 @@ struct ScheduleView: View {
     
     @StateObject var viewModel = ScheduleViewModel()
     
+
+    
     var body: some View {
         ZStack {
             
             NavigationView {
                 
 
-                List(viewModel.scheduledEvents) { event in
-                    
-                    ScheduleCell(event: event)
+                List {
+                    ForEach(viewModel.scheduledEvents, id: \.self) { event in
+                        ScheduleCell(event: event)
+                    }
+                    .onDelete(perform: delete)
                 }
                 .frame(maxWidth: .infinity)
                 .edgesIgnoringSafeArea(.leading)
                 .listStyle(.grouped)
                 .navigationTitle(Text("Schedule"))
                 .background(Color("ccfBackground"))
+                
             }
             .onAppear() {
                 self.viewModel.getScheduledEvents()
             }
+        }
+    }
+    
+    func delete(at offsets: IndexSet) {
+        
+        for i in offsets.makeIterator() {
+            let event = viewModel.scheduledEvents[i]
+            
+            PersistenceManager.updateWith(schedule: event, actionType: .remove) { error in
+                
+            }
+            
         }
     }
 }
