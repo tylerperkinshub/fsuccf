@@ -13,11 +13,6 @@ struct CCFTabView: View {
     
     var body: some View {
         TabView {
-            EventsView()
-                .tabItem{
-                    Image(systemName: "house.fill")
-                    Text("Events")
-                }
             
             AnnouncementsView()
                 .tabItem {
@@ -25,10 +20,18 @@ struct CCFTabView: View {
                     Text("Announcements")
                 }
             
+            EventsView()
+                .tabItem{
+                    Image(systemName: "calendar")
+                    Text("Events")
+                }
+            
+
+            
             ScheduleView()
                 .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Schedule")
+                    Image(systemName: "alarm.fill")
+                    Text("Reminders")
                 }
             
         }

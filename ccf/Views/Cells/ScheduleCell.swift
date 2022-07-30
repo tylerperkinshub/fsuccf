@@ -9,17 +9,30 @@ import SwiftUI
 
 struct ScheduleCell: View {
     
-    
+    let event: Scheduled
     
     var body: some View {
         VStack {
+            HStack{
+                Text(event.title)
+                    .font(.system(size: 24, weight: .semibold))
+                Spacer()
+            }
+            
+            HStack {
+                Text("\(event.date) @ \(event.time)")
+                Spacer()
+                Text(event.location)
+            }      
             
         }
+        .frame(width: .infinity, height: 50, alignment: .topLeading)
+        .padding([.leading, .trailing], 12)
     }
 }
 
 struct ScheduleCell_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleCell()
+        ScheduleCell(event: Scheduled(id: "", title: "Test", time: "07:00", date: "08/01/2022", location: "Coffee Shop"))
     }
 }

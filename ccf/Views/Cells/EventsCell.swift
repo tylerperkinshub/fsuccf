@@ -21,28 +21,33 @@ struct EventsCell: View {
                     .scaledToFill()
 
                 Text(event.title)
-                    .frame(width: 335, height: 160, alignment: .topLeading)
+                    .frame(width: 335, height: 35, alignment: .top)
                     .font(.system(size: 32, weight: .semibold))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(.white)
+                    .offset(x: 0, y: -50)
+                Rectangle()
+                    .frame(width: 300, height: 4)
+                    .foregroundColor(.white)
+                    .offset(x: 0, y: -20)
+                
             }
 
             ZStack{
                 Rectangle()
                     .frame(width: 354, height: 50)
-                    .foregroundColor(Color.secondary)
+                    .foregroundColor(Color("ccfPrimary"))
                 HStack{
-                    Text("\(event.eventDate) @ \(event.time!)")
+                    Text("\(event.eventDate) @ \(event.time)")
                     Spacer()
                     Text(event.location)
                 }
                 .frame(width: 335, height: 40, alignment: .center)
                 .font(.system(size: 16, weight: .semibold))
-                .foregroundColor(Color.white)
+                .foregroundColor(Color("ccfSecondary"))
             }
-
-            
         }
         .cornerRadius(12)
+        
     }
 }
 

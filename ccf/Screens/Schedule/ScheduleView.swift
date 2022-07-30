@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ScheduleView: View {
+    
+    @StateObject var viewModel = ScheduleViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            NavigationView {
+                List(viewModel.scheduledEvents) { event in
+                    ScheduleCell(event: event)
+                }
+                .frame(maxWidth: .infinity)
+                .edgesIgnoringSafeArea(.leading)
+                .listStyle(.grouped)
+                .navigationTitle(Text("Schedule"))
+                .background(Color("ccfBackground"))
+            }
+        }
     }
 }
 

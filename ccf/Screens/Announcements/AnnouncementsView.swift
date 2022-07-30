@@ -6,10 +6,44 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct AnnouncementsView: View {
+    
+    @StateObject var viewModel = AnnouncementsViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        NavigationView {
+            ScrollView{
+
+                LazyVGrid(columns: viewModel.columns) {
+                    ForEach(MockData.announcements) { announcement in
+                        AnnouncementsCell(announcement: announcement)
+                            .onTapGesture {
+                                viewModel.selectedAnnouncement = announcement
+                            }
+
+                    }
+                }
+
+            }
+            .navigationTitle("Announcement")
+            .sheet(isPresented: $viewModel.isShowingDetailView) {
+                AnnouncementsDetailsView(announcement: MockData.announcement, isShowingDetailView: $viewModel.isShowingDetailView)
+            }
+            .background(Color("ccfBackground"))
+        }
+
+
+
+ 
+        
+        
+        
+
+        
     }
 }
 

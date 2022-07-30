@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Scheduled: Codable, Hashable, Identifiable {
+
+    let id: String
+    let title: String
+    let time: String
+    let date: String
+    let location: String
+
+}
