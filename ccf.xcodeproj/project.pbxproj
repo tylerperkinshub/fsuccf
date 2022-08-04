@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E1A56698971FB5AA81BADE5 /* Pods_ccf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */; };
+		8E130F26289B8EF2000F7520 /* NotificationTimerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */; };
+		8E130F29289B92B4000F7520 /* NotificationTimerAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */; };
 		8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E66A28736C8400466E07 /* ccfApp.swift */; };
 		8E16E66F28736C8600466E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E66E28736C8600466E07 /* Assets.xcassets */; };
 		8E16E67228736C8600466E07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E67128736C8600466E07 /* Preview Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		1B9F5F320B327E7427B40C6D /* Pods-ccf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ccf.release.xcconfig"; path = "Target Support Files/Pods-ccf/Pods-ccf.release.xcconfig"; sourceTree = "<group>"; };
 		6E9B33EBACA35EA5248DE8CD /* Pods-ccf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ccf.debug.xcconfig"; path = "Target Support Files/Pods-ccf/Pods-ccf.debug.xcconfig"; sourceTree = "<group>"; };
 		84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ccf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTimerAlert.swift; sourceTree = "<group>"; };
+		8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTimerAlertViewModel.swift; sourceTree = "<group>"; };
 		8E16E66728736C8400466E07 /* ccf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ccf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E16E66A28736C8400466E07 /* ccfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfApp.swift; sourceTree = "<group>"; };
 		8E16E66E28736C8600466E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E130F24289B8EAA000F7520 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				8E130F27289B929E000F7520 /* New Group */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		8E130F27289B929E000F7520 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */,
+				8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		8E16E65E28736C8400466E07 = {
 			isa = PBXGroup;
 			children = (
@@ -145,10 +166,10 @@
 			children = (
 				8E52465B28807D7F006E3D8D /* CCFTabView */,
 				8E16E683287372ED00466E07 /* Announcements */,
-				8E16E682287372E500466E07 /* Events */,
-				8E16E684287372F700466E07 /* Schedule */,
-				8E3B58F5287F6813007883DD /* EventDetails */,
 				8E921F652882296300E6FC0D /* AnnouncementsDetails */,
+				8E16E682287372E500466E07 /* Events */,
+				8E3B58F5287F6813007883DD /* EventDetails */,
+				8E16E684287372F700466E07 /* Schedule */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -156,6 +177,7 @@
 		8E16E680287372C000466E07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E130F24289B8EAA000F7520 /* Alerts */,
 				8E921F622881F71200E6FC0D /* Labels */,
 				8E3B58FA287F9151007883DD /* Buttons */,
 				8E16E681287372C700466E07 /* Cells */,
@@ -397,6 +419,7 @@
 				8EFB78A52882337E001219D5 /* AnnouncementsCell.swift in Sources */,
 				8E3B58F9287F683A007883DD /* EventDetailsViewModel.swift in Sources */,
 				8E7E9B782895701F0007E10B /* PersistenceManager.swift in Sources */,
+				8E130F29289B92B4000F7520 /* NotificationTimerAlertViewModel.swift in Sources */,
 				8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */,
 				8E16E6972873782800466E07 /* EventsCell.swift in Sources */,
 				8E16E6952873765400466E07 /* NetworkManager.swift in Sources */,
@@ -407,6 +430,7 @@
 				8E16E690287375D400466E07 /* AnnocementsViewModel.swift in Sources */,
 				8E7E9B7B289571080007E10B /* ccfError.swift in Sources */,
 				8E921F672882298A00E6FC0D /* AnnouncementDetailsViewModel.swift in Sources */,
+				8E130F26289B8EF2000F7520 /* NotificationTimerAlert.swift in Sources */,
 				8E16E67B28736E3600466E07 /* Event.swift in Sources */,
 				8E3B58FC287F9174007883DD /* CCFDismissButton.swift in Sources */,
 				8E16E692287375E100466E07 /* ScheduleViewModel.swift in Sources */,
@@ -548,7 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ccf/Preview Content\"";
-				DEVELOPMENT_TEAM = 6DMEA6Z5ZU;
+				DEVELOPMENT_TEAM = HD7GU4PN9C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -560,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.typerdev.ccf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -578,7 +602,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ccf/Preview Content\"";
-				DEVELOPMENT_TEAM = 6DMEA6Z5ZU;
+				DEVELOPMENT_TEAM = HD7GU4PN9C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -590,7 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.typerdev.ccf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

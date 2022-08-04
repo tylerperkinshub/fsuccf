@@ -13,7 +13,7 @@ struct AnnouncementsCell: View {
     
     var body: some View {
         VStack {
-            Text(dateFormatMMMd(date: announcement.date))
+            Text(announcement.date)
                 .frame(width: 314, height: 42, alignment: .topLeading)
                 .foregroundColor(Color("ccfPrimary"))
                 .font(.system(size: 32, weight: .semibold))
@@ -29,7 +29,7 @@ struct AnnouncementsCell: View {
                         .frame(width: 300, height: 4)
                         .foregroundColor(Color("ccfSecondary"))
                         .offset(x: 0, y: -40)
-                    Text(announcement.title)
+                    Text(announcement.headline)
                         .frame(width: 300)
                         .foregroundColor(Color("ccfSecondary"))
                         .font(.system(size: 24, weight: .semibold))

@@ -33,6 +33,6 @@ struct ScheduleCell: View {
 
 struct ScheduleCell_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleCell(event: Scheduled(id: "", title: "Test", time: "07:00", date: "08/01/2022", location: "Coffee Shop"))
+        ScheduleCell(event: Scheduled(id: "", title: "Test", time: "07:00", date: "08/01/2022", location: "Coffee Shop", reminder: 0))
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import FirebaseFirestore
 
 struct AnnouncementsView: View {
     
@@ -19,7 +20,7 @@ struct AnnouncementsView: View {
             ScrollView{
 
                 LazyVGrid(columns: viewModel.columns) {
-                    ForEach(MockData.announcements) { announcement in
+                    ForEach(viewModel.announcements.sorted(by: {$0.date > $1.date})) { announcement in
                         AnnouncementsCell(announcement: announcement)
                             .onTapGesture {
                                 viewModel.selectedAnnouncement = announcement
@@ -30,8 +31,13 @@ struct AnnouncementsView: View {
 
             }
             .navigationTitle("Announcement")
+            .onAppear() {
+                self.viewModel.fetchData()
+            }
             .sheet(isPresented: $viewModel.isShowingDetailView) {
-                AnnouncementsDetailsView(announcement: MockData.announcement, isShowingDetailView: $viewModel.isShowingDetailView)
+                AnnouncementsDetailsView(
+                    announcement: viewModel.selectedAnnouncement!,
+                            isShowingDetailView: $viewModel.isShowingDetailView)
             }
             .background(Color("ccfBackground"))
         }

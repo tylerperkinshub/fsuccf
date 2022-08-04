@@ -14,5 +14,6 @@ struct Scheduled: Codable, Hashable, Identifiable {
     let time: String
     let date: String
     let location: String
+    let reminder: Int
 
 }

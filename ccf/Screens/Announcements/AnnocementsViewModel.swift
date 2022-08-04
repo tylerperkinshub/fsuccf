@@ -7,16 +7,42 @@
 
 import Foundation
 import SwiftUI
+import FirebaseFirestore
 
 final class AnnouncementsViewModel: ObservableObject {
+    
+    @Published var isShowingDetailView = false
+    @Published var announcements = [Announcement]()
     
     var selectedAnnouncement: Announcement? {
         didSet { isShowingDetailView = true }
     }
     
-    @Published var isShowingDetailView = false
     
     let columns: [GridItem] = [GridItem(.flexible())]
+    
+    private var db = Firestore.firestore()
+    
+    func fetchData() {
+        db.collection("announcements").addSnapshotListener { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                print("No documents")
+                return
+            }
+            self.announcements = documents.map { (documentSnapshot) -> Announcement in
+                let data = documentSnapshot.data()
+                let createdBy = data["createdBy"] as? String ?? ""
+                let date = data["date"] as? String ?? ""
+                let description = data["description"] as? String ?? ""
+                let headline = data["headline"] as? String ?? ""
+                let publishDate = data["publishDate"] as? String ?? ""
+                let url = data["url"] as? String ?? ""
+                
+                return Announcement(headline: headline, createdBy: createdBy, date: date, publishDate: publishDate, description: description, urlString: url)
+            }
+            
+        }
+    }
     
     
 }

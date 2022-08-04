@@ -15,10 +15,33 @@ struct EventsCell: View {
         VStack(spacing: 0) {
 
             ZStack{
-                Image(event.image)
-                    .resizable()
-                    .frame(width: 354, height: 200)
-                    .scaledToFill()
+                
+                AsyncImage(url: URL(string: event.image),
+                           content: { phase in
+                    switch phase {
+                    case .empty:
+                        Image("background")
+                            .resizable()
+                            .frame(width: 354, height: 200)
+                            .scaledToFit()
+                    case .success(let image):
+                        image.resizable()
+                            .frame(width: 354, height: 200)
+                            .scaledToFit()
+                    case .failure:
+                        Image("background")
+                            .resizable()
+                            .frame(width: 354, height: 200)
+                            .scaledToFit()
+                    @unknown default:
+                        Image("background")
+                            .resizable()
+                            .frame(width: 354, height: 200)
+                            .scaledToFit()
+                    }
+
+                })
+
 
                 Text(event.title)
                     .frame(width: 335, height: 35, alignment: .top)

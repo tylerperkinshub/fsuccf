@@ -24,7 +24,7 @@ struct AnnouncementDetailsCell: View {
                     .foregroundColor(Color("ccfPrimary"))
                     .cornerRadius(12)
                 VStack(spacing: 0) {
-                    Text(announcement.title)
+                    Text(announcement.headline)
                         .frame(width: 300)
                         .foregroundColor(Color("ccfSecondary"))
                         .font(.system(size: 24, weight: .semibold))

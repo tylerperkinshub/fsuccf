@@ -6,3 +6,26 @@
 //
 
 import Foundation
+import SwiftUI
+
+//final class EventDetailsViewModel {
+//    
+//    @Published var event: Event
+//    
+//
+//    func eventDetailButton(scheduledEvents: [Scheduled]) -> some View {
+//        
+//        
+//        
+//        return AnyView(Button(
+//            action: {
+//            
+//        },
+//            label: {
+//            
+//        })
+//        )
+//    }
+//    
+//}
+

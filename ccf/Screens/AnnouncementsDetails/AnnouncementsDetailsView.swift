@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Foundation
+import FirebaseFirestore
 
 struct AnnouncementsDetailsView: View {
     
@@ -26,7 +28,7 @@ struct AnnouncementsDetailsView: View {
                     .foregroundColor(Color("ccfPrimary"))
                     .cornerRadius(12)
                 VStack() {
-                    Text(announcement.title)
+                    Text(announcement.headline)
                         .frame(width: 300)
                         .foregroundColor(Color("ccfSecondary"))
                         .font(.system(size: 24, weight: .semibold))
@@ -47,19 +49,25 @@ struct AnnouncementsDetailsView: View {
 
             }
             
-            Button {
+            if announcement.urlString == nil {
                 
-            } label: {
-                Text("More Info")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .frame(width: 280, height: 50)
-                    .background(Color("ccfPrimary"))
-                    .foregroundColor(Color("ccfSecondary"))
-                    .cornerRadius(10)
+            } else {
+                Button {
+                    
+                } label: {
+                    Text("More Info")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .frame(width: 280, height: 50)
+                        .background(Color("ccfPrimary"))
+                        .foregroundColor(Color("ccfSecondary"))
+                        .cornerRadius(10)
+                }
+                .padding()
+                .background(Color("ccfBackground"))
             }
-            .padding()
-            .background(Color("ccfBackground"))
+            
+            
             Spacer()
         }
         

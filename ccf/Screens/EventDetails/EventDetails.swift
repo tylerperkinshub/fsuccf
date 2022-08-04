@@ -10,8 +10,10 @@ import SwiftUI
 struct EventDetails: View {
     
     var event: Event
+    
     @Binding var isShowingDetailView: Bool
     let dateTimeComponenets = CCFTimeAndDateComponents()
+    @State var scheduledEvents = [Scheduled]()
     
     var body: some View {
         VStack{
@@ -19,7 +21,32 @@ struct EventDetails: View {
             CCFDismissButton(isShowingDetailView: $isShowingDetailView)
             VStack(spacing: 0){
                 ZStack{
-                    Image(event.image)
+                    AsyncImage(url: URL(string: event.image),
+                               content: { phase in
+                        switch phase {
+                        case .empty:
+                            Image("background")
+                                .resizable()
+                                .frame(width: 354, height: 200)
+                                .scaledToFit()
+                        case .success(let image):
+                            image.resizable()
+                                .frame(width: 354, height: 200)
+                                .scaledToFit()
+                        case .failure:
+                            Image("background")
+                                .resizable()
+                                .frame(width: 354, height: 200)
+                                .scaledToFit()
+                        @unknown default:
+                            Image("background")
+                                .resizable()
+                                .frame(width: 354, height: 200)
+                                .scaledToFit()
+                        }
+
+                    })
+
                     
                         VStack{
                             Text(event.title)
@@ -55,13 +82,15 @@ struct EventDetails: View {
                 }
 
             }
+            
+            
 
             Button {
                 
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.success)
                 
-                let scheduledEvent = Scheduled(id: UUID().uuidString, title: event.title, time: event.time, date: event.eventDate, location: event.location)
+                let scheduledEvent = Scheduled(id: UUID().uuidString, title: event.title, time: event.time, date: event.eventDate, location: event.location, reminder: 0)
                 
                 print(scheduledEvent)
                 
@@ -122,6 +151,15 @@ struct EventDetails: View {
                     print("All set!")
                 } else if let error = error {
                     print(error.localizedDescription)
+                }
+            }
+            
+            PersistenceManager.retrieveScheduled { result in
+                switch result {
+                case .success(let event):
+                    self.scheduledEvents = event
+                case.failure(let error):
+                    print(error)
                 }
             }
         }
