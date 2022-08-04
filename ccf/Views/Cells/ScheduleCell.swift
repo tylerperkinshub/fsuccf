@@ -20,13 +20,13 @@ struct ScheduleCell: View {
             }
             
             HStack {
-                Text("\(event.date) @ \(event.time)")
+                Text("\(dateFormatMMMdyyyy(date:event.date)) @ \(timeFormathmma(time:event.time))")
                 Spacer()
                 Text(event.location)
             }      
             
         }
-        .frame(width: .infinity, height: 50, alignment: .topLeading)
+        .frame(height: 50, alignment: .topLeading)
         .padding([.leading, .trailing], 12)
     }
 }

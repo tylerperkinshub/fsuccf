@@ -13,7 +13,7 @@ struct AnnouncementsCell: View {
     
     var body: some View {
         VStack {
-            Text(announcement.date)
+            Text(dateFormatMMMd(date:announcement.date))
                 .frame(width: 314, height: 42, alignment: .topLeading)
                 .foregroundColor(Color("ccfPrimary"))
                 .font(.system(size: 32, weight: .semibold))

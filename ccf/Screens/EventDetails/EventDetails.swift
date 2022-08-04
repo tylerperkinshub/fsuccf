@@ -27,21 +27,21 @@ struct EventDetails: View {
                         case .empty:
                             Image("background")
                                 .resizable()
-                                .frame(width: 354, height: 200)
+                                .frame(width: 354, height: 275)
                                 .scaledToFit()
                         case .success(let image):
                             image.resizable()
-                                .frame(width: 354, height: 200)
+                                .frame(width: 354, height: 275)
                                 .scaledToFit()
                         case .failure:
                             Image("background")
                                 .resizable()
-                                .frame(width: 354, height: 200)
+                                .frame(width: 354, height: 275)
                                 .scaledToFit()
                         @unknown default:
                             Image("background")
                                 .resizable()
-                                .frame(width: 354, height: 200)
+                                .frame(width: 354, height: 275)
                                 .scaledToFit()
                         }
 
@@ -55,7 +55,7 @@ struct EventDetails: View {
                             Rectangle()
                                 .frame(width:300, height: 4)
    
-                            Text("\(event.eventDate) @ \(event.time)")
+                            Text("\(dateFormatMMMdyyyy(date:event.eventDate)) @ \(timeFormathmma(time:event.time))")
                                 .font(.system(size: 16, weight: .semibold))
 
                         }

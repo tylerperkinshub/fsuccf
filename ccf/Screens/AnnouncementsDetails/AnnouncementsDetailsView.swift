@@ -13,8 +13,10 @@ struct AnnouncementsDetailsView: View {
     
     var announcement: Announcement
     @Binding var isShowingDetailView: Bool
+    @State private var isShowingSafariView = false
     
     var body: some View {
+        
         VStack{
             CCFDismissButton(isShowingDetailView: $isShowingDetailView)
             Text(dateFormatMMMd(date: announcement.date))
@@ -53,7 +55,7 @@ struct AnnouncementsDetailsView: View {
                 
             } else {
                 Button {
-                    
+                    isShowingSafariView = true
                 } label: {
                     Text("More Info")
                         .font(.title2)
@@ -70,6 +72,9 @@ struct AnnouncementsDetailsView: View {
             
             Spacer()
         }
+        .sheet(isPresented: $isShowingSafariView, content: {
+            SafariView(url: URL(string: announcement.urlString!) ?? URL(string: "https://www.ccffsu.com")!)
+        })
         
     }
 }

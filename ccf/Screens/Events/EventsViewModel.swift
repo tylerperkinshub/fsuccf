@@ -21,6 +21,8 @@ final class EventsViewModel: ObservableObject {
     }
     
     
+    
+    
     let columns: [GridItem] = [GridItem(.flexible())]
     
     
@@ -42,10 +44,11 @@ final class EventsViewModel: ObservableObject {
                 let location = data["location"] as? String ?? ""
                 let publishDate = data["publishDate"] as? String ?? ""
                 let series = data["series"] as? String ?? ""
-                let cost = data["cost"] as? Int ?? 0
+                let cost = data["cost"] as? String ?? ""
                 let registrationUrl = data["eventUrl"] as? String ?? ""
                 let description = data["description"] as? String ?? ""
                 let image = data["imageURL"] as? String ?? ""
+                
                 
                 return Event(title: title, image: image, time: time, createdBy: createdBy, eventDate: eventDate, location: location, publishDate: publishDate, series: series, cost: cost, registerURL: registrationUrl, description: description)
             }

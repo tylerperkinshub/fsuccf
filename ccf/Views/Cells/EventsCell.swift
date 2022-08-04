@@ -60,7 +60,7 @@ struct EventsCell: View {
                     .frame(width: 354, height: 50)
                     .foregroundColor(Color("ccfPrimary"))
                 HStack{
-                    Text("\(event.eventDate) @ \(event.time)")
+                    Text("\(dateFormatMMMdyyyy(date:event.eventDate)) @ \(timeFormathmma(time:event.time))")
                     Spacer()
                     Text(event.location)
                 }

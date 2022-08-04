@@ -10,6 +10,7 @@
 		2E1A56698971FB5AA81BADE5 /* Pods_ccf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */; };
 		8E130F26289B8EF2000F7520 /* NotificationTimerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */; };
 		8E130F29289B92B4000F7520 /* NotificationTimerAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */; };
+		8E130F2B289C540A000F7520 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F2A289C540A000F7520 /* SafariView.swift */; };
 		8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E66A28736C8400466E07 /* ccfApp.swift */; };
 		8E16E66F28736C8600466E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E66E28736C8600466E07 /* Assets.xcassets */; };
 		8E16E67228736C8600466E07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E67128736C8600466E07 /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ccf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTimerAlert.swift; sourceTree = "<group>"; };
 		8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTimerAlertViewModel.swift; sourceTree = "<group>"; };
+		8E130F2A289C540A000F7520 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		8E16E66728736C8400466E07 /* ccf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ccf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E16E66A28736C8400466E07 /* ccfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfApp.swift; sourceTree = "<group>"; };
 		8E16E66E28736C8600466E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,7 +140,6 @@
 				8E16E66E28736C8600466E07 /* Assets.xcassets */,
 				8E16E6A12873D43300466E07 /* GoogleService-Info.plist */,
 				8E16E67028736C8600466E07 /* Preview Content */,
-				8E921F632882159900E6FC0D /* Extensions.swift */,
 			);
 			path = ccf;
 			sourceTree = "<group>";
@@ -177,6 +178,7 @@
 		8E16E680287372C000466E07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E130F2A289C540A000F7520 /* SafariView.swift */,
 				8E130F24289B8EAA000F7520 /* Alerts */,
 				8E921F622881F71200E6FC0D /* Labels */,
 				8E3B58FA287F9151007883DD /* Buttons */,
@@ -262,6 +264,7 @@
 			children = (
 				8E7E9B7A289571080007E10B /* ccfError.swift */,
 				8E7E9B7C289585D30007E10B /* CCFTimeAndDateComponents.swift */,
+				8E921F632882159900E6FC0D /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				8E16E690287375D400466E07 /* AnnocementsViewModel.swift in Sources */,
 				8E7E9B7B289571080007E10B /* ccfError.swift in Sources */,
 				8E921F672882298A00E6FC0D /* AnnouncementDetailsViewModel.swift in Sources */,
+				8E130F2B289C540A000F7520 /* SafariView.swift in Sources */,
 				8E130F26289B8EF2000F7520 /* NotificationTimerAlert.swift in Sources */,
 				8E16E67B28736E3600466E07 /* Event.swift in Sources */,
 				8E3B58FC287F9174007883DD /* CCFDismissButton.swift in Sources */,

@@ -10,9 +10,6 @@ import SwiftUI
 struct ScheduleView: View {
     
     @StateObject var viewModel = ScheduleViewModel()
-    @StateObject var alertViewModel = NotificationTimerAlertViewModel()
-    
-
     
     var body: some View {
         ZStack {
@@ -31,14 +28,6 @@ struct ScheduleView: View {
                 .listStyle(.grouped)
                 .navigationTitle(Text("Schedule"))
                 .background(Color("ccfBackground"))
-                .toolbar {
-                    Image(systemName: "gear")
-                        .onTapGesture {
-                            print("pressed")
-                        }
-                }
-
-                
             }
 
             .onAppear() {
