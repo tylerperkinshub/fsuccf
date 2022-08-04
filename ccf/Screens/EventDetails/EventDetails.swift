@@ -201,6 +201,9 @@ struct EventDetails: View {
                 }
             }
         }
+        .sheet(isPresented: $isShowingSafariView, content: {
+            SafariView(url: URL(string: event.registerURL!) ?? URL(string: "https://www.ccffsu.com")!)
+        })
         
     }
 }
