@@ -114,8 +114,8 @@ struct EventDetails: View {
                 calendar.timeZone = TimeZone.current
                 var testDate = DateComponents()
                 
-                testDate.hour = Int(dateTimeComponenets.twentyFourHour(eventTime: event.time))
-                testDate.minute = Int(dateTimeComponenets.minute(eventTime: event.time))
+                testDate.hour = Int(10)
+                testDate.minute = Int(0)
                 
                 testDate.month = Int(dateTimeComponenets.month(eventDate: event.eventDate))
                 testDate.day = Int(dateTimeComponenets.day(eventDate: event.eventDate))
