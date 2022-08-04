@@ -45,9 +45,10 @@ final class EventsViewModel: ObservableObject {
                 let publishDate = data["publishDate"] as? String ?? ""
                 let series = data["series"] as? String ?? ""
                 let cost = data["cost"] as? String ?? ""
-                let registrationUrl = data["eventUrl"] as? String ?? ""
+                let registrationUrl = data["eventURL"] as? String ?? ""
                 let description = data["description"] as? String ?? ""
                 let image = data["imageURL"] as? String ?? ""
+                
                 
                 
                 return Event(title: title, image: image, time: time, createdBy: createdBy, eventDate: eventDate, location: location, publishDate: publishDate, series: series, cost: cost, registerURL: registrationUrl, description: description)

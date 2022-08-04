@@ -51,9 +51,8 @@ struct AnnouncementsDetailsView: View {
 
             }
             
-            if announcement.urlString == nil {
+            if announcement.urlString != "" {
                 
-            } else {
                 Button {
                     isShowingSafariView = true
                 } label: {

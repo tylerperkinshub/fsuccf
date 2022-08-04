@@ -10,9 +10,10 @@ import SwiftUI
 struct EventDetails: View {
     
     var event: Event
+    let dateTimeComponenets = CCFTimeAndDateComponents()
     
     @Binding var isShowingDetailView: Bool
-    let dateTimeComponenets = CCFTimeAndDateComponents()
+    @State private var isShowingSafariView = false
     @State var scheduledEvents = [Scheduled]()
     
     var body: some View {
@@ -49,8 +50,19 @@ struct EventDetails: View {
 
                     
                         VStack{
-                            Text(event.title)
-                                .font(.system(size: 24, weight: .semibold))
+                            HStack{
+                                
+                                Text(event.title)
+                                    
+                                if event.cost != "" {
+                                    Text("- \(event.cost!)")
+                                    
+                                }
+
+                                
+                            }
+                            .font(.system(size: 24, weight: .semibold))
+
 
                             Rectangle()
                                 .frame(width:300, height: 4)
@@ -77,6 +89,15 @@ struct EventDetails: View {
                             
                         Text(event.location)
                             .frame(width: 350, height: 20, alignment: .topLeading)
+                        
+                        if event.series != "" {
+                            Text(event.series!)
+                                .frame(width: 350, height: 20, alignment: .topLeading)
+                            
+                        }
+                        
+
+                        
                     }
 
                 }
@@ -142,6 +163,23 @@ struct EventDetails: View {
             }
             .padding()
             .background(Color("ccfBackground"))
+            
+            if event.registerURL != "" {
+                
+                Button {
+                    isShowingSafariView = true
+                } label: {
+                    Text("More Info")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .frame(width: 280, height: 50)
+                        .background(Color("ccfPrimary"))
+                        .foregroundColor(Color("ccfSecondary"))
+                        .cornerRadius(10)
+                }
+                .padding()
+                .background(Color("ccfBackground"))
+            }
             
             Spacer()
         }
