@@ -20,7 +20,7 @@ struct AnnouncementsView: View {
             ScrollView{
 
                 LazyVGrid(columns: viewModel.columns) {
-                    ForEach(viewModel.announcements.sorted(by: {$0.date > $1.date})) { announcement in
+                    ForEach(viewModel.publishedAnnouncements(announcements: viewModel.announcements.sorted(by: {$0.date > $1.date})))   { announcement in
                         AnnouncementsCell(announcement: announcement)
                             .onTapGesture {
                                 viewModel.selectedAnnouncement = announcement

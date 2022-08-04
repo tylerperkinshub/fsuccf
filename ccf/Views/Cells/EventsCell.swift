@@ -61,11 +61,13 @@ struct EventsCell: View {
                     .foregroundColor(Color("ccfPrimary"))
                 HStack{
                     Text("\(dateFormatMMMdyyyy(date:event.eventDate)) @ \(timeFormathmma(time:event.time))")
+                        .minimumScaleFactor(0.7)
                     Spacer()
                     Text(event.location)
+                        .minimumScaleFactor(0.7)
                 }
                 .frame(width: 335, height: 40, alignment: .center)
-                .font(.system(size: 16, weight: .semibold))
+                .font(.system(size: 14, weight: .semibold))
                 .foregroundColor(Color("ccfSecondary"))
             }
         }

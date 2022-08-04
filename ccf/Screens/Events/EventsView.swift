@@ -23,7 +23,7 @@ struct EventsView: View {
                 
                 
                 LazyVGrid(columns: viewModel.columns) {
-                    ForEach(viewModel.events.sorted(by: {$0.eventDate < $1.eventDate})) { event in
+                    ForEach(viewModel.publishedEvents(events: viewModel.events.sorted(by: {$0.eventDate < $1.eventDate}))) { event in
                         EventsCell(event: event)
                             .onTapGesture {
                                 viewModel.selectedEvent = event

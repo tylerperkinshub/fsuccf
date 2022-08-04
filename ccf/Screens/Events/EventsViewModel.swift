@@ -57,4 +57,23 @@ final class EventsViewModel: ObservableObject {
         } 
     }
     
+    func publishedEvents(events: [Event]) -> [Event] {
+        
+        var returnedEvents: [Event] = []
+        
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let today = dateFormatter.string(from: date)
+        
+        for event in events {
+            if event.publishDate <= today {
+                returnedEvents.append(event)
+            }
+        }
+        
+        return returnedEvents
+    }
+    
 }

@@ -22,6 +22,9 @@ enum PersistenceManager {
             case .success(var scheduled):
                 switch actionType {
                 case .add:
+                    
+
+                    
                     guard !scheduled.contains(schedule) else {
                         completed(.unableToSchedule)
                         return

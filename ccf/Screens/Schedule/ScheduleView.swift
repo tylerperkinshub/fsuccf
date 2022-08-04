@@ -46,6 +46,7 @@ struct ScheduleView: View {
             }
             
         }
+        viewModel.getScheduledEvents()
     }
 }
 

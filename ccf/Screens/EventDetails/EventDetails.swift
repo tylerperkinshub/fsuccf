@@ -16,6 +16,9 @@ struct EventDetails: View {
     @State private var isShowingSafariView = false
     @State var scheduledEvents = [Scheduled]()
     
+    @State private var presentAlreadyScheduledAlert = false
+    
+    
     var body: some View {
         VStack{
             
@@ -84,7 +87,6 @@ struct EventDetails: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(width: 350, alignment: .leading)
                             .font(.system(size: 16, weight: .light))
-                            .padding()
                             
                             
                         Text(event.location)
@@ -96,16 +98,9 @@ struct EventDetails: View {
                             
                         }
                         
-
-                        
                     }
-
                 }
-
             }
-            
-            
-
             Button {
                 
                 let generator = UINotificationFeedbackGenerator()
@@ -115,9 +110,16 @@ struct EventDetails: View {
                 
                 print(scheduledEvent)
                 
+                for event in scheduledEvents {
+                    if event.date == scheduledEvent.date && event.time == scheduledEvent.time {
+                        print("Already scheduled")
+                        presentAlreadyScheduledAlert = true
+                        return
+                    }
+                }
+                
                 PersistenceManager.updateWith(schedule: scheduledEvent, actionType: .add) { error in
                     guard let error = error else {
-                        print(scheduledEvent.title)
                         return
                     }
                     
@@ -194,18 +196,23 @@ struct EventDetails: View {
             
             PersistenceManager.retrieveScheduled { result in
                 switch result {
-                case .success(let event):
-                    self.scheduledEvents = event
+                case .success(let events):
+                    
+                    self.scheduledEvents = events
                 case.failure(let error):
                     print(error)
                 }
             }
         }
+        
         .sheet(isPresented: $isShowingSafariView, content: {
             SafariView(url: URL(string: event.registerURL!) ?? URL(string: "https://www.ccffsu.com")!)
         })
         
+        .alert("This event has already been scheduled", isPresented: $presentAlreadyScheduledAlert, actions: { })
+
     }
+
 }
 
 struct EventDetails_Previews: PreviewProvider {

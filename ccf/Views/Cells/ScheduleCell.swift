@@ -21,8 +21,10 @@ struct ScheduleCell: View {
             
             HStack {
                 Text("\(dateFormatMMMdyyyy(date:event.date)) @ \(timeFormathmma(time:event.time))")
+                    .minimumScaleFactor(0.7)
                 Spacer()
                 Text(event.location)
+                    .minimumScaleFactor(0.7)
             }      
             
         }

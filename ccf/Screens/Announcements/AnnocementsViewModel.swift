@@ -45,4 +45,23 @@ final class AnnouncementsViewModel: ObservableObject {
     }
     
     
+    func publishedAnnouncements(announcements: [Announcement]) -> [Announcement] {
+        
+        var returnedAnnouncements: [Announcement] = []
+        
+        let date = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let today = dateFormatter.string(from: date)
+        
+        for event in announcements {
+            if event.publishDate <= today {
+                returnedAnnouncements.append(event)
+            }
+        }
+        
+        return returnedAnnouncements
+    }
+    
 }
