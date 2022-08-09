@@ -51,8 +51,3 @@ func timeFormathmma(time: String) -> String {
     
 }
 
-extension String {
-    
-
-    
-}

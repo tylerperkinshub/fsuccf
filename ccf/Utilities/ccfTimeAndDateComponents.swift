@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CCFTimeAndDateComponents {
+struct ccfTimeAndDateComponents {
     
     func year(eventDate: String) -> String {
         return String(eventDate.prefix(4))

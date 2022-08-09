@@ -13,11 +13,9 @@ struct ScheduleView: View {
     
     var body: some View {
         ZStack {
-            
             NavigationView {
-                
-
                 List {
+                    
                     ForEach(viewModel.scheduledEvents, id: \.self) { event in
                         ScheduleCell(event: event)
                     }
@@ -29,8 +27,8 @@ struct ScheduleView: View {
                 .navigationTitle(Text("Schedule"))
                 .background(Color("ccfBackground"))
             }
-
             .onAppear() {
+                
                 self.viewModel.getScheduledEvents()
             }
         }

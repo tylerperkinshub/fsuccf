@@ -10,7 +10,8 @@ import SwiftUI
 struct AnnouncementDetailsCell: View {
     
     var announcement: Announcement
-    
+    @Binding var isShowingDetailView: Bool
+
     var body: some View {
         VStack{
             Text(dateFormatMMMd(date: announcement.date))
@@ -19,51 +20,34 @@ struct AnnouncementDetailsCell: View {
                 .font(.system(size: 32, weight: .semibold))
             
             ZStack {
+                // Background
                 Rectangle()
-                    .frame(width: 314, height: 214)
+                    .frame(width: 314, height: 300)
                     .foregroundColor(Color("ccfPrimary"))
                     .cornerRadius(12)
-                VStack(spacing: 0) {
+                
+                // Creating Announcement Cell
+                VStack() {
                     Text(announcement.headline)
                         .frame(width: 300)
                         .foregroundColor(Color("ccfSecondary"))
                         .font(.system(size: 24, weight: .semibold))
                         .multilineTextAlignment(.leading)
-                        .offset(x: 0, y: -10)
+                    
                     Rectangle()
                         .frame(width: 300, height: 4)
                         .foregroundColor(Color("ccfSecondary"))
+                        .offset(x: 0, y: 10)
 
                     Text(announcement.description)
-                        .frame(width: 280, height: 120, alignment: .center)
+                        .frame(width: 280, height: 180, alignment: .center)
                         .font(.system(size: 14))
                         .foregroundColor(Color("ccfSecondary"))
-                        
-                    
                 }
-                
-                
+            }
+            
+            // Only returns a button if there is more info.
 
-                
-                
-                
-                
-                
-            }
-            
-            Button {
-                
-            } label: {
-                Text("More Info")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .frame(width: 280, height: 50)
-                    .background(Color("ccfPrimary"))
-                    .foregroundColor(Color("ccfSecondary"))
-                    .cornerRadius(10)
-            }
-            .padding()
-            
         }
 
     }
@@ -71,6 +55,6 @@ struct AnnouncementDetailsCell: View {
 
 struct AnnouncementDetailsCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnnouncementDetailsCell(announcement: MockData.announcement)
+        AnnouncementDetailsCell(announcement: MockData.announcement, isShowingDetailView: .constant(false))
     }
 }

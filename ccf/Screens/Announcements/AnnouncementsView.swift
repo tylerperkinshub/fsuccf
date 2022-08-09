@@ -14,13 +14,15 @@ struct AnnouncementsView: View {
     @StateObject var viewModel = AnnouncementsViewModel()
     
     var body: some View {
-        
-        
         NavigationView {
             ScrollView{
 
+                // Laying out columns set in the viewModel.
                 LazyVGrid(columns: viewModel.columns) {
-                    ForEach(viewModel.publishedAnnouncements(announcements: viewModel.announcements.sorted(by: {$0.date > $1.date})))   { announcement in
+                    // For each Published Announcement pulled from firebase.
+                    ForEach(viewModel.publishedAnnouncements(announcements:
+                        // Announcements sorted with most recent first.
+                        viewModel.announcements.sorted(by: {$0.date > $1.date})))   { announcement in
                         AnnouncementsCell(announcement: announcement)
                             .onTapGesture {
                                 viewModel.selectedAnnouncement = announcement
@@ -32,8 +34,10 @@ struct AnnouncementsView: View {
             }
             .navigationTitle("Announcement")
             .onAppear() {
+                // Contatcting Firebase when screen appears.
                 self.viewModel.fetchData()
             }
+            // Passing in the tapped Announcement as a sheet. 
             .sheet(isPresented: $viewModel.isShowingDetailView) {
                 AnnouncementsDetailsView(
                     announcement: viewModel.selectedAnnouncement!,
@@ -41,15 +45,6 @@ struct AnnouncementsView: View {
             }
             .background(Color("ccfBackground"))
         }
-
-
-
- 
-        
-        
-        
-
-        
     }
 }
 

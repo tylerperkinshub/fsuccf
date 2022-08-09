@@ -17,18 +17,22 @@ final class AnnouncementsViewModel: ObservableObject {
     var selectedAnnouncement: Announcement? {
         didSet { isShowingDetailView = true }
     }
-    
-    
+
+    // Setting single column for AnnouncementView
     let columns: [GridItem] = [GridItem(.flexible())]
     
+    // Configuring to firestore
     private var db = Firestore.firestore()
     
+    // Calling out to Firebase for all announcements.
     func fetchData() {
         db.collection("announcements").addSnapshotListener { snapshot, error in
             guard let documents = snapshot?.documents else {
                 print("No documents")
                 return
             }
+            
+            // Mapping documents to announcements array
             self.announcements = documents.map { (documentSnapshot) -> Announcement in
                 let data = documentSnapshot.data()
                 let createdBy = data["createdBy"] as? String ?? ""
@@ -40,11 +44,10 @@ final class AnnouncementsViewModel: ObservableObject {
                 
                 return Announcement(headline: headline, createdBy: createdBy, date: date, publishDate: publishDate, description: description, urlString: url)
             }
-            
         }
     }
     
-    
+    // Making sure the Announcements are not published ahead of today's date.
     func publishedAnnouncements(announcements: [Announcement]) -> [Announcement] {
         
         var returnedAnnouncements: [Announcement] = []

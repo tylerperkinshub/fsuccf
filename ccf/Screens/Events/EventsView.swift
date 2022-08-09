@@ -20,18 +20,14 @@ struct EventsView: View {
         
         NavigationView {
             ScrollView{
-                
-                
                 LazyVGrid(columns: viewModel.columns) {
                     ForEach(viewModel.publishedEvents(events: viewModel.events.sorted(by: {$0.eventDate < $1.eventDate}))) { event in
                         EventsCell(event: event)
                             .onTapGesture {
                                 viewModel.selectedEvent = event
                             }
-                        
                     }
                 }
-
             }
             .navigationTitle("Upcoming Events")
             .onAppear() {
@@ -43,14 +39,8 @@ struct EventsView: View {
                     isShowingDetailView: $viewModel.isShowingDetailView)
             }
             .background(Color("ccfBackground"))
-    
         }
-
-        
- 
-        
     }
-    
 }
 
 struct EventsView_Previews: PreviewProvider {

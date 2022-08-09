@@ -10,6 +10,7 @@ import SwiftUI
 
 struct Event: Identifiable {
     
+    // Events are created from fsuccf.typer.dev webpage. 
     let id = UUID()
     let title: String
     let image: String
@@ -26,7 +27,7 @@ struct Event: Identifiable {
 }
 
 
-
+// Mocked Data for any UI Previews
 struct MockData {
     
     static let event = Event(title: "First Monday Night", image: "background", time: "7pm", createdBy: "Kane", eventDate: "08/23/2021", location: "925 W. Jefferson", publishDate: "08/14/2021", series: nil, cost: nil, registerURL: nil, description: "Bible study, Music, Free Food, Great Community")

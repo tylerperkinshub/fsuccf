@@ -10,7 +10,7 @@ import SwiftUI
 struct EventDetails: View {
     
     var event: Event
-    let dateTimeComponenets = CCFTimeAndDateComponents()
+    let dateTimeComponenets = ccfTimeAndDateComponents()
     
     @Binding var isShowingDetailView: Bool
     @State private var isShowingSafariView = false
@@ -25,54 +25,22 @@ struct EventDetails: View {
             CCFDismissButton(isShowingDetailView: $isShowingDetailView)
             VStack(spacing: 0){
                 ZStack{
-                    AsyncImage(url: URL(string: event.image),
-                               content: { phase in
-                        switch phase {
-                        case .empty:
-                            Image("background")
-                                .resizable()
-                                .frame(width: 354, height: 275)
-                                .scaledToFit()
-                        case .success(let image):
-                            image.resizable()
-                                .frame(width: 354, height: 275)
-                                .scaledToFit()
-                        case .failure:
-                            Image("background")
-                                .resizable()
-                                .frame(width: 354, height: 275)
-                                .scaledToFit()
-                        @unknown default:
-                            Image("background")
-                                .resizable()
-                                .frame(width: 354, height: 275)
-                                .scaledToFit()
-                        }
-
-                    })
-
                     
+                    CCFAsyncImage(imageString: .constant(event.image))
                         VStack{
                             HStack{
-                                
                                 Text(event.title)
-                                    
                                 if event.cost != "" {
                                     Text("- \(event.cost!)")
-                                    
                                 }
-
-                                
                             }
                             .font(.system(size: 24, weight: .semibold))
-
 
                             Rectangle()
                                 .frame(width:300, height: 4)
    
                             Text("\(dateFormatMMMdyyyy(date:event.eventDate)) @ \(timeFormathmma(time:event.time))")
                                 .font(.system(size: 16, weight: .semibold))
-
                         }
                         .padding([.bottom], 6)
                         .offset(x: 0, y: -75)
