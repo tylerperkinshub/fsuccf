@@ -30,7 +30,7 @@ struct Event: Identifiable {
 // Mocked Data for any UI Previews
 struct MockData {
     
-    static let event = Event(title: "First Monday Night", image: "background", time: "7pm", createdBy: "Kane", eventDate: "08/23/2021", location: "925 W. Jefferson", publishDate: "08/14/2021", series: nil, cost: nil, registerURL: nil, description: "Bible study, Music, Free Food, Great Community")
+    static let event = Event(title: "First Monday Night", image: "background", time: "07:00pm", createdBy: "Kane", eventDate: "2022-03-28", location: "925 W. Jefferson", publishDate: "2022-03-28", series: "This is Series", cost: "100", registerURL: "http://www.fsuccf.com", description: "Bible study, Music, Free Food, Great Community")
     
     
     static let events = [

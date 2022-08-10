@@ -28,7 +28,6 @@ final class AnnouncementsViewModel: ObservableObject {
     func fetchData() {
         db.collection("announcements").addSnapshotListener { snapshot, error in
             guard let documents = snapshot?.documents else {
-                print("No documents")
                 return
             }
             
@@ -66,5 +65,4 @@ final class AnnouncementsViewModel: ObservableObject {
         
         return returnedAnnouncements
     }
-    
 }

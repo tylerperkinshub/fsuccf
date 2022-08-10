@@ -14,27 +14,24 @@ final class EventsViewModel: ObservableObject {
     @Published var isShowingDetailView = false
     @Published var events = [Event]()
     
-    
-    
     var selectedEvent: Event? {
         didSet { isShowingDetailView = true }
     }
-    
-    
-    
-    
+
+    //Setting single column for EventsView
     let columns: [GridItem] = [GridItem(.flexible())]
-    
-    
+
+    // Configuring to firestore
     private var db = Firestore.firestore()
     
+    // Calling out to Firebase for all announcements.
     func fetchData() {
         db.collection("events").addSnapshotListener { snapshot, error in
             guard let documents = snapshot?.documents else {
-                print("No documents")
                 return
             }
         
+            // Mapping documents to events array
             self.events = documents.map { (documentSnapshot) -> Event in
                 let data = documentSnapshot.data()
                 let title = data["title"] as? String ?? ""
@@ -49,14 +46,12 @@ final class EventsViewModel: ObservableObject {
                 let description = data["description"] as? String ?? ""
                 let image = data["imageURL"] as? String ?? ""
                 
-                
-                
                 return Event(title: title, image: image, time: time, createdBy: createdBy, eventDate: eventDate, location: location, publishDate: publishDate, series: series, cost: cost, registerURL: registrationUrl, description: description)
             }
-            
         } 
     }
     
+    // Making sure the Events are not published ahead of today's date.
     func publishedEvents(events: [Event]) -> [Event] {
         
         var returnedEvents: [Event] = []
@@ -75,5 +70,4 @@ final class EventsViewModel: ObservableObject {
         
         return returnedEvents
     }
-    
 }

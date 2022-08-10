@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2E1A56698971FB5AA81BADE5 /* Pods_ccf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */; };
-		8E130F26289B8EF2000F7520 /* NotificationTimerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */; };
-		8E130F29289B92B4000F7520 /* NotificationTimerAlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */; };
 		8E130F2B289C540A000F7520 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E130F2A289C540A000F7520 /* SafariView.swift */; };
 		8E16E66B28736C8400466E07 /* ccfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16E66A28736C8400466E07 /* ccfApp.swift */; };
 		8E16E66F28736C8600466E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E16E66E28736C8600466E07 /* Assets.xcassets */; };
@@ -34,11 +32,12 @@
 		8E52465D28807DA3006E3D8D /* CCFTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52465C28807DA3006E3D8D /* CCFTabView.swift */; };
 		8E70B47F28A2D45600267BC1 /* CCFAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70B47E28A2D45600267BC1 /* CCFAsyncImage.swift */; };
 		8E70B48128A321A700267BC1 /* CCFSafariButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70B48028A321A600267BC1 /* CCFSafariButton.swift */; };
+		8E70B48328A43CB700267BC1 /* CCFEventsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70B48228A43CB700267BC1 /* CCFEventsDetailCell.swift */; };
+		8E70B48528A442EE00267BC1 /* CCFScheduleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70B48428A442EE00267BC1 /* CCFScheduleButton.swift */; };
 		8E7E9B782895701F0007E10B /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9B772895701F0007E10B /* PersistenceManager.swift */; };
 		8E7E9B7B289571080007E10B /* ccfError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9B7A289571080007E10B /* ccfError.swift */; };
 		8E7E9B7D289585D30007E10B /* ccfTimeAndDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9B7C289585D30007E10B /* ccfTimeAndDateComponents.swift */; };
 		8E921F642882159900E6FC0D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E921F632882159900E6FC0D /* Extensions.swift */; };
-		8E921F672882298A00E6FC0D /* AnnouncementDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E921F662882298A00E6FC0D /* AnnouncementDetailsViewModel.swift */; };
 		8E921F69288229A500E6FC0D /* AnnouncementsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E921F68288229A500E6FC0D /* AnnouncementsDetailsView.swift */; };
 		8EFB78A52882337E001219D5 /* AnnouncementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB78A42882337E001219D5 /* AnnouncementsCell.swift */; };
 		8EFB78A72882353B001219D5 /* AnnouncementDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB78A62882353B001219D5 /* AnnouncementDetailsCell.swift */; };
@@ -48,8 +47,6 @@
 		1B9F5F320B327E7427B40C6D /* Pods-ccf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ccf.release.xcconfig"; path = "Target Support Files/Pods-ccf/Pods-ccf.release.xcconfig"; sourceTree = "<group>"; };
 		6E9B33EBACA35EA5248DE8CD /* Pods-ccf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ccf.debug.xcconfig"; path = "Target Support Files/Pods-ccf/Pods-ccf.debug.xcconfig"; sourceTree = "<group>"; };
 		84DCBBF64BF8B599BF8629A3 /* Pods_ccf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ccf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTimerAlert.swift; sourceTree = "<group>"; };
-		8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTimerAlertViewModel.swift; sourceTree = "<group>"; };
 		8E130F2A289C540A000F7520 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		8E16E66728736C8400466E07 /* ccf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ccf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E16E66A28736C8400466E07 /* ccfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfApp.swift; sourceTree = "<group>"; };
@@ -75,11 +72,12 @@
 		8E52465C28807DA3006E3D8D /* CCFTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFTabView.swift; sourceTree = "<group>"; };
 		8E70B47E28A2D45600267BC1 /* CCFAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFAsyncImage.swift; sourceTree = "<group>"; };
 		8E70B48028A321A600267BC1 /* CCFSafariButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFSafariButton.swift; sourceTree = "<group>"; };
+		8E70B48228A43CB700267BC1 /* CCFEventsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFEventsDetailCell.swift; sourceTree = "<group>"; };
+		8E70B48428A442EE00267BC1 /* CCFScheduleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFScheduleButton.swift; sourceTree = "<group>"; };
 		8E7E9B772895701F0007E10B /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		8E7E9B7A289571080007E10B /* ccfError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfError.swift; sourceTree = "<group>"; };
 		8E7E9B7C289585D30007E10B /* ccfTimeAndDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfTimeAndDateComponents.swift; sourceTree = "<group>"; };
 		8E921F632882159900E6FC0D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		8E921F662882298A00E6FC0D /* AnnouncementDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailsViewModel.swift; sourceTree = "<group>"; };
 		8E921F68288229A500E6FC0D /* AnnouncementsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsDetailsView.swift; sourceTree = "<group>"; };
 		8EFB78A42882337E001219D5 /* AnnouncementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsCell.swift; sourceTree = "<group>"; };
 		8EFB78A62882353B001219D5 /* AnnouncementDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailsCell.swift; sourceTree = "<group>"; };
@@ -97,23 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8E130F24289B8EAA000F7520 /* Alerts */ = {
-			isa = PBXGroup;
-			children = (
-				8E130F27289B929E000F7520 /* New Group */,
-			);
-			path = Alerts;
-			sourceTree = "<group>";
-		};
-		8E130F27289B929E000F7520 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				8E130F28289B92B4000F7520 /* NotificationTimerAlertViewModel.swift */,
-				8E130F25289B8EF2000F7520 /* NotificationTimerAlert.swift */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		8E16E65E28736C8400466E07 = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +165,6 @@
 			children = (
 				8E70B47D28A2D44200267BC1 /* Images */,
 				8E130F2A289C540A000F7520 /* SafariView.swift */,
-				8E130F24289B8EAA000F7520 /* Alerts */,
 				8E921F622881F71200E6FC0D /* Labels */,
 				8E3B58FA287F9151007883DD /* Buttons */,
 				8E16E681287372C700466E07 /* Cells */,
@@ -199,6 +179,7 @@
 				8EFB78A42882337E001219D5 /* AnnouncementsCell.swift */,
 				8EFB78A62882353B001219D5 /* AnnouncementDetailsCell.swift */,
 				8E16E69A2873784500466E07 /* ScheduleCell.swift */,
+				8E70B48228A43CB700267BC1 /* CCFEventsDetailCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -253,6 +234,7 @@
 			children = (
 				8E3B58FB287F9174007883DD /* CCFDismissButton.swift */,
 				8E70B48028A321A600267BC1 /* CCFSafariButton.swift */,
+				8E70B48428A442EE00267BC1 /* CCFScheduleButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -294,7 +276,6 @@
 		8E921F652882296300E6FC0D /* AnnouncementsDetails */ = {
 			isa = PBXGroup;
 			children = (
-				8E921F662882298A00E6FC0D /* AnnouncementDetailsViewModel.swift */,
 				8E921F68288229A500E6FC0D /* AnnouncementsDetailsView.swift */,
 			);
 			path = AnnouncementsDetails;
@@ -433,11 +414,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFB78A72882353B001219D5 /* AnnouncementDetailsCell.swift in Sources */,
+				8E70B48328A43CB700267BC1 /* CCFEventsDetailCell.swift in Sources */,
 				8EFB78A52882337E001219D5 /* AnnouncementsCell.swift in Sources */,
 				8E3B58F9287F683A007883DD /* EventDetailsViewModel.swift in Sources */,
 				8E7E9B782895701F0007E10B /* PersistenceManager.swift in Sources */,
-				8E130F29289B92B4000F7520 /* NotificationTimerAlertViewModel.swift in Sources */,
 				8E16E69E2873789A00466E07 /* CCFLabel.swift in Sources */,
+				8E70B48528A442EE00267BC1 /* CCFScheduleButton.swift in Sources */,
 				8E16E6972873782800466E07 /* EventsCell.swift in Sources */,
 				8E16E6952873765400466E07 /* NetworkManager.swift in Sources */,
 				8E16E67D28736E4000466E07 /* Announcement.swift in Sources */,
@@ -447,10 +429,8 @@
 				8E16E68A2873759800466E07 /* AnnouncementsView.swift in Sources */,
 				8E16E690287375D400466E07 /* AnnocementsViewModel.swift in Sources */,
 				8E7E9B7B289571080007E10B /* ccfError.swift in Sources */,
-				8E921F672882298A00E6FC0D /* AnnouncementDetailsViewModel.swift in Sources */,
 				8E70B47F28A2D45600267BC1 /* CCFAsyncImage.swift in Sources */,
 				8E130F2B289C540A000F7520 /* SafariView.swift in Sources */,
-				8E130F26289B8EF2000F7520 /* NotificationTimerAlert.swift in Sources */,
 				8E16E67B28736E3600466E07 /* Event.swift in Sources */,
 				8E3B58FC287F9174007883DD /* CCFDismissButton.swift in Sources */,
 				8E16E692287375E100466E07 /* ScheduleViewModel.swift in Sources */,

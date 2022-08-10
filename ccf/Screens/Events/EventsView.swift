@@ -11,18 +11,18 @@ import FirebaseCore
 
 struct EventsView: View {
     
-
     @StateObject var viewModel = EventsViewModel()
 
-    
-    
     var body: some View {
         
         NavigationView {
             ScrollView{
+                // Initing column
                 LazyVGrid(columns: viewModel.columns) {
+                    // Displaying all Published Events in Firebase
                     ForEach(viewModel.publishedEvents(events: viewModel.events.sorted(by: {$0.eventDate < $1.eventDate}))) { event in
                         EventsCell(event: event)
+                        // Presenting selected Event
                             .onTapGesture {
                                 viewModel.selectedEvent = event
                             }
@@ -30,10 +30,12 @@ struct EventsView: View {
                 }
             }
             .navigationTitle("Upcoming Events")
+            //Calling Firebase for all data
             .onAppear() {
                 self.viewModel.fetchData()
             }
             .sheet(isPresented: $viewModel.isShowingDetailView) {
+                // Presenting Event details
                 EventDetails(
                     event: viewModel.selectedEvent!,
                     isShowingDetailView: $viewModel.isShowingDetailView)
