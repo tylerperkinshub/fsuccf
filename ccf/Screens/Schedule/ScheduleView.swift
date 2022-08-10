@@ -17,7 +17,7 @@ struct ScheduleView: View {
                 List {
                     
                     ForEach(viewModel.scheduledEvents, id: \.self) { event in
-                        ScheduleCell(event: event)
+                        CCFScheduleCell(event: event)
                     }
                     .onDelete(perform: delete)
                 }

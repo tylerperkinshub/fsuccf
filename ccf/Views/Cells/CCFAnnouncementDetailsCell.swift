@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnnouncementDetailsCell: View {
+struct CCFAnnouncementDetailsCell: View {
     
     var announcement: Announcement
     @Binding var isShowingDetailView: Bool
@@ -55,6 +55,6 @@ struct AnnouncementDetailsCell: View {
 
 struct AnnouncementDetailsCell_Previews: PreviewProvider {
     static var previews: some View {
-        AnnouncementDetailsCell(announcement: MockData.announcement, isShowingDetailView: .constant(false))
+        CCFAnnouncementDetailsCell(announcement: MockData.announcement, isShowingDetailView: .constant(false))
     }
 }

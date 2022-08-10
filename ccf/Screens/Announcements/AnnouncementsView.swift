@@ -23,7 +23,7 @@ struct AnnouncementsView: View {
                     ForEach(viewModel.publishedAnnouncements(announcements:
                         // Announcements sorted with most recent first.
                         viewModel.announcements.sorted(by: {$0.date > $1.date})))   { announcement in
-                        AnnouncementsCell(announcement: announcement)
+                        CCFAnnouncementsCell(announcement: announcement)
                             .onTapGesture {
                                 viewModel.selectedAnnouncement = announcement
                             }

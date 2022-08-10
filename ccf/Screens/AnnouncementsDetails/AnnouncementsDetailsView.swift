@@ -22,7 +22,7 @@ struct AnnouncementsDetailsView: View {
             CCFDismissButton(isShowingDetailView: $isShowingDetailView)
             
             // Getting the detail sell
-            AnnouncementDetailsCell(announcement: announcement, isShowingDetailView: $isShowingDetailView)
+            CCFAnnouncementDetailsCell(announcement: announcement, isShowingDetailView: $isShowingDetailView)
             
             // If there is a URL in the announcement it will display this button.
             if announcement.urlString != "" {

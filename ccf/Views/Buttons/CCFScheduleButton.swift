@@ -10,7 +10,7 @@ import SwiftUI
 struct CCFScheduleButton: View {
     
     var event: Event
-    var scheduledEvents = [Scheduled]()
+    @State var scheduledEvents = [Scheduled]()
     
     @Binding var isShowingDetailView: Bool
     @Binding var presentAlreadyScheduledAlert: Bool
@@ -80,6 +80,18 @@ struct CCFScheduleButton: View {
                 .background(Color("ccfPrimary"))
                 .foregroundColor(Color("ccfSecondary"))
                 .cornerRadius(10)
+        }
+        .onAppear() {
+            // Gets any scheduled objects.
+            PersistenceManager.retrieveScheduled { result in
+                switch result {
+                case .success(let events):
+                    self.scheduledEvents = events
+                    
+                case.failure(let error):
+                    print(error)
+                }
+            }
         }
         .padding()
         .background(Color("ccfBackground"))

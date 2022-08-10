@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScheduleCell: View {
+struct CCFScheduleCell: View {
     
     let event: Scheduled
     
@@ -35,6 +35,6 @@ struct ScheduleCell: View {
 
 struct ScheduleCell_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleCell(event: Scheduled(id: "", title: "Test", time: "07:00", date: "08/01/2022", location: "Coffee Shop", reminder: 0))
+        CCFScheduleCell(event: Scheduled(id: "", title: "Test", time: "07:00", date: "08/01/2022", location: "Coffee Shop", reminder: 0))
     }
 }

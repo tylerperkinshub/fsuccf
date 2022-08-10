@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EventsCell: View {
+struct CCFEventsCell: View {
     
     let event: Event
     
@@ -78,6 +78,6 @@ struct EventsCell: View {
 
 struct EventsCell_Previews: PreviewProvider {
     static var previews: some View {
-        EventsCell(event: MockData.event)
+        CCFEventsCell(event: MockData.event)
     }
 }
