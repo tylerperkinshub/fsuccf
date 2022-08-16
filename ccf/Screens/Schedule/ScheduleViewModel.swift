@@ -15,7 +15,6 @@ final class ScheduleViewModel: ObservableObject {
         PersistenceManager.retrieveScheduled { result in
             switch result {
             case .success(let schedule):
-                print("This is my schedule \(schedule)")
                 if schedule.isEmpty {
                     self.scheduledEvents = []
                     
