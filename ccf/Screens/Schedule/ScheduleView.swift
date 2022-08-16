@@ -24,7 +24,7 @@ struct ScheduleView: View {
                 .frame(maxWidth: .infinity)
                 .edgesIgnoringSafeArea(.leading)
                 .listStyle(.grouped)
-                .navigationTitle(Text("Schedule"))
+                .navigationTitle(Text("Reminders"))
                 .background(Color("ccfBackground"))
             }
             .onAppear() {

@@ -32,7 +32,7 @@ struct AnnouncementsView: View {
                 }
 
             }
-            .navigationTitle("Announcement")
+            .navigationTitle("Announcements")
             .onAppear() {
                 // Contatcting Firebase when screen appears.
                 self.viewModel.fetchData()
