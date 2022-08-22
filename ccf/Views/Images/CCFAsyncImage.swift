@@ -21,22 +21,30 @@ struct CCFAsyncImage: View {
             case .empty:
                 Image("background")
                     .resizable()
-                    .frame(width: 354, height: 275)
-                    .scaledToFit()
+                    .frame(height: 275)
+                    .aspectRatio(contentMode: .fill)
+                    //.frame(width: 354, height: 275)
+                    //.scaledToFit()
             case .success(let image):
                 image.resizable()
-                    .frame(width: 354, height: 275)
-                    .scaledToFit()
+                    .frame(height: 275)
+                    .aspectRatio(contentMode: .fill)
+                    //.frame(width: 354, height: 275)
+                    //.scaledToFit()
             case .failure:
                 Image("background")
                     .resizable()
-                    .frame(width: 354, height: 275)
-                    .scaledToFit()
+                    .frame(height: 275)
+                    .aspectRatio(contentMode: .fill)
+                    //.frame(width: 354, height: 275)
+                    //.scaledToFit()
             @unknown default:
                 Image("background")
                     .resizable()
-                    .frame(width: 354, height: 275)
-                    .scaledToFit()
+                    .frame(height: 275)
+                    //.frame(width: 354, height: 275)
+                    .aspectRatio(contentMode: .fit)
+                    //.scaledToFit()
             }
 
         })

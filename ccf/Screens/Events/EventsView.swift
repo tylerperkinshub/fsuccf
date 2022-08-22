@@ -22,7 +22,8 @@ struct EventsView: View {
                     // Displaying all Published Events in Firebase
                     ForEach(viewModel.publishedEvents(events: viewModel.events.sorted(by: {$0.eventDate < $1.eventDate}))) { event in
                         CCFEventsCell(event: event)
-                        // Presenting selected Event
+                    
+                         //Presenting selected Event
                             .onTapGesture {
                                 viewModel.selectedEvent = event
                             }

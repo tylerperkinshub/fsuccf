@@ -46,6 +46,7 @@ struct CCFEventsCell: View {
                 Text(event.title)
                     .frame(width: 335, height: 35, alignment: .top)
                     .font(.system(size: 32, weight: .semibold))
+                    .minimumScaleFactor(0.50)
                     .foregroundColor(.white)
                     .offset(x: 0, y: -50)
                 Rectangle()
@@ -61,10 +62,10 @@ struct CCFEventsCell: View {
                     .foregroundColor(Color("ccfPrimary"))
                 HStack{
                     Text("\(dateFormatMMMdyyyy(date:event.eventDate)) @ \(timeFormathmma(time:event.time))")
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.5)
                     Spacer()
                     Text(event.location)
-                        .minimumScaleFactor(0.7)
+                        .minimumScaleFactor(0.5)
                 }
                 .frame(width: 335, height: 40, alignment: .center)
                 .font(.system(size: 14, weight: .semibold))

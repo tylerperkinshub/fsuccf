@@ -26,6 +26,7 @@ struct EventDetails: View {
             VStack(spacing: 0){
                 // Inits hero image
                 CCFEventsDetailCell(event: event)
+                    
                 
                 // Text below Cell
                 VStack(alignment: .leading) {

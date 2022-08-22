@@ -12,7 +12,7 @@ struct Announcement: Identifiable {
     // Events are created from fsuccf.typer.dev webpage.
     let id = UUID()
     let headline: String
-    let createdBy: String
+    let createdBy: String?
     let date: String
     let publishDate: String
     let description: String

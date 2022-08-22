@@ -34,12 +34,12 @@ final class EventsViewModel: ObservableObject {
             // Mapping documents to events array
             self.events = documents.map { (documentSnapshot) -> Event in
                 let data = documentSnapshot.data()
-                let title = data["title"] as? String ?? ""
-                let time = data["time"] as? String ?? ""
+                let title = data["title"] as? String ?? "Please check internet connection"
+                let time = data["time"] as? String ?? "12:00am"
                 let createdBy = data["name"] as? String ?? ""
-                let eventDate = data["date"] as? String ?? ""
+                let eventDate = data["date"] as? String ?? "1900-01-01"
                 let location = data["location"] as? String ?? ""
-                let publishDate = data["publishDate"] as? String ?? ""
+                let publishDate = data["publishDate"] as? String ?? "1900-01-01"
                 let series = data["series"] as? String ?? ""
                 let cost = data["cost"] as? String ?? ""
                 let registrationUrl = data["eventURL"] as? String ?? ""

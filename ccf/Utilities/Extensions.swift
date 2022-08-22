@@ -17,6 +17,10 @@ func dateFormatMMMd(date: String) -> String {
     
     dateFormatter.dateFormat = "MMM d"
     
+    if dateToConvert == nil {
+        return ""
+    }
+    
     let returnedString = dateFormatter.string(from: dateToConvert!)
 
     return returnedString
@@ -32,6 +36,10 @@ func dateFormatMMMdyyyy(date: String) -> String {
     
     dateFormatter.dateFormat = "MMM d, yyyy"
     
+    if dateToConvert == nil {
+        return ""
+    }
+    
     let returnedString = dateFormatter.string(from: dateToConvert!)
 
     return returnedString
@@ -44,6 +52,10 @@ func timeFormathmma(time: String) -> String {
     let dateToConvert = dateFormatter.date(from: time)
     
     dateFormatter.dateFormat = "h:mm a"
+    
+    if dateToConvert == nil {
+        return ""
+    }
     
     let returnedString = dateFormatter.string(from: dateToConvert!)
 
