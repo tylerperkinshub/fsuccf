@@ -11,6 +11,7 @@ final class ImageLoader: ObservableObject {
     
     @Published var image: Image? = nil
     
+    // Network call or pulling from cache and setting image on main thread.
     func load(fromURLString urlString: String) {
         NetworkManager.shared.downloadImage(fromURLString: urlString) { uiImage in
             DispatchQueue.main.async {
@@ -39,6 +40,8 @@ struct CCFRemoteImage: View {
     let urlString: String
     
     var body: some View {
+        
+        // Getting image on appear. 
         RemoteImage(image: imageLoader.image)
             .onAppear { imageLoader.load(fromURLString: urlString) }
     }
