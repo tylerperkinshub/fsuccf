@@ -14,7 +14,11 @@ struct CCFEventsDetailCell: View {
     var body: some View {
 
         ZStack() {
-            CCFAsyncImage(imageString: .constant(event.image))
+            
+            CCFRemoteImage(urlString: event.image)
+                .scaledToFit()
+            
+            //CCFAsyncImage(imageString: .constant(event.image))
             VStack(spacing: 0){
                 HStack{
                     Text(event.title)

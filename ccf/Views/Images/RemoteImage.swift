@@ -28,12 +28,12 @@ struct RemoteImage: View {
     var image: Image?
     
     var body: some View {
-        image?.resizable() ?? Image("background").resizable()
+        image?.resizable() ?? Image("default").resizable()
     }
 }
 
 
-struct AppetizerRemoteImage: View {
+struct CCFRemoteImage: View {
     
     @StateObject var imageLoader = ImageLoader()
     let urlString: String

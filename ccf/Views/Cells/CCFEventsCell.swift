@@ -16,31 +16,35 @@ struct CCFEventsCell: View {
 
             ZStack{
                 
-                AsyncImage(url: URL(string: event.image),
-                           content: { phase in
-                    switch phase {
-                    case .empty:
-                        Image("background")
-                            .resizable()
-                            .frame(width: 354, height: 200)
-                            .scaledToFit()
-                    case .success(let image):
-                        image.resizable()
-                            .frame(width: 354, height: 200)
-                            .scaledToFit()
-                    case .failure:
-                        Image("background")
-                            .resizable()
-                            .frame(width: 354, height: 200)
-                            .scaledToFit()
-                    @unknown default:
-                        Image("background")
-                            .resizable()
-                            .frame(width: 354, height: 200)
-                            .scaledToFit()
-                    }
-
-                })
+                CCFRemoteImage(urlString: event.image)
+                    .frame(width: 354, height: 200)
+                    .scaledToFit()
+                
+//                AsyncImage(url: URL(string: event.image),
+//                           content: { phase in
+//                    switch phase {
+//                    case .empty:
+//                        Image("background")
+//                            .resizable()
+//                            .frame(width: 354, height: 200)
+//                            .scaledToFit()
+//                    case .success(let image):
+//                        image.resizable()
+//                            .frame(width: 354, height: 200)
+//                            .scaledToFit()
+//                    case .failure:
+//                        Image("background")
+//                            .resizable()
+//                            .frame(width: 354, height: 200)
+//                            .scaledToFit()
+//                    @unknown default:
+//                        Image("background")
+//                            .resizable()
+//                            .frame(width: 354, height: 200)
+//                            .scaledToFit()
+//                    }
+//
+//                })
 
 
                 Text(event.title)
