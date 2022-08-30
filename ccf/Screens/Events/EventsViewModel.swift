@@ -14,6 +14,7 @@ final class EventsViewModel: ObservableObject {
     @Published var isShowingDetailView = false
     @Published var events = [Event]()
     
+    
     var selectedEvent: Event? {
         didSet { isShowingDetailView = true }
     }
@@ -63,9 +64,13 @@ final class EventsViewModel: ObservableObject {
         let today = dateFormatter.string(from: date)
         
         for event in events {
-            if event.publishDate <= today {
+            
+            print("Events \(event.title) day: \(event.publishDate) @ \(event.time)")
+            
+            if event.publishDate <= today && event.eventDate >= today {
                 returnedEvents.append(event)
             }
+
         }
         
         return returnedEvents

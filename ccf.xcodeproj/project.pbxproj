@@ -39,6 +39,7 @@
 		8E7E9B7D289585D30007E10B /* ccfTimeAndDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7E9B7C289585D30007E10B /* ccfTimeAndDateComponents.swift */; };
 		8E921F642882159900E6FC0D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E921F632882159900E6FC0D /* Extensions.swift */; };
 		8E921F69288229A500E6FC0D /* AnnouncementsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E921F68288229A500E6FC0D /* AnnouncementsDetailsView.swift */; };
+		8ED853A328BE67F800E19341 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED853A228BE67F800E19341 /* RemoteImage.swift */; };
 		8EFB78A52882337E001219D5 /* CCFAnnouncementsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB78A42882337E001219D5 /* CCFAnnouncementsCell.swift */; };
 		8EFB78A72882353B001219D5 /* CCFAnnouncementDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFB78A62882353B001219D5 /* CCFAnnouncementDetailsCell.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		8E7E9B7C289585D30007E10B /* ccfTimeAndDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ccfTimeAndDateComponents.swift; sourceTree = "<group>"; };
 		8E921F632882159900E6FC0D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8E921F68288229A500E6FC0D /* AnnouncementsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsDetailsView.swift; sourceTree = "<group>"; };
+		8ED853A228BE67F800E19341 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		8EFB78A42882337E001219D5 /* CCFAnnouncementsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFAnnouncementsCell.swift; sourceTree = "<group>"; };
 		8EFB78A62882353B001219D5 /* CCFAnnouncementDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCFAnnouncementDetailsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				8E70B47E28A2D45600267BC1 /* CCFAsyncImage.swift */,
+				8ED853A228BE67F800E19341 /* RemoteImage.swift */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				8E70B47F28A2D45600267BC1 /* CCFAsyncImage.swift in Sources */,
 				8E130F2B289C540A000F7520 /* SafariView.swift in Sources */,
 				8E16E67B28736E3600466E07 /* Event.swift in Sources */,
+				8ED853A328BE67F800E19341 /* RemoteImage.swift in Sources */,
 				8E3B58FC287F9174007883DD /* CCFDismissButton.swift in Sources */,
 				8E16E692287375E100466E07 /* ScheduleViewModel.swift in Sources */,
 				8E7E9B7D289585D30007E10B /* ccfTimeAndDateComponents.swift in Sources */,
