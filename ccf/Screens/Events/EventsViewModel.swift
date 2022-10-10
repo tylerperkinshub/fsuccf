@@ -73,6 +73,6 @@ final class EventsViewModel: ObservableObject {
 
         }
         
-        return returnedEvents
+        return returnedEvents.sorted(by: {$0.eventDate < $1.eventDate})
     }
 }

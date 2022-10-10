@@ -11,6 +11,7 @@ struct Scheduled: Codable, Hashable, Identifiable {
 
     // Scheduled is an event saved to local storage for pushing local notifications to users. 
     let id: String
+    
     let title: String
     let time: String
     let date: String

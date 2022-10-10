@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Foundation
 import FirebaseFirestore
 
 struct AnnouncementsView: View {
@@ -22,21 +21,22 @@ struct AnnouncementsView: View {
                     // For each Published Announcement pulled from firebase.
                     ForEach(viewModel.publishedAnnouncements(announcements:
                         // Announcements sorted with most recent first.
-                        viewModel.announcements.sorted(by: {$0.date > $1.date})))   { announcement in
+                        viewModel.announcements))   { announcement in
                         CCFAnnouncementsCell(announcement: announcement)
                             .onTapGesture {
                                 viewModel.selectedAnnouncement = announcement
                             }
-
                     }
                 }
-
             }
             .navigationTitle("Announcements")
             .onAppear() {
                 // Contatcting Firebase when screen appears.
                 self.viewModel.fetchData()
             }
+            
+            //self.viewModel.customDeinit()
+            
             // Passing in the tapped Announcement as a sheet. 
             .sheet(isPresented: $viewModel.isShowingDetailView) {
                 AnnouncementsDetailsView(

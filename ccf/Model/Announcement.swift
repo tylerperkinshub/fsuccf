@@ -5,7 +5,7 @@
 //  Created by Tyler Perkins on 7/4/22.
 //
 
-import UIKit
+import Foundation
 
 struct Announcement: Identifiable {
     

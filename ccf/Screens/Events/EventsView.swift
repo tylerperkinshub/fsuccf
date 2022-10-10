@@ -20,9 +20,8 @@ struct EventsView: View {
                 // Initing column
                 LazyVGrid(columns: viewModel.columns) {
                     // Displaying all Published Events in Firebase
-                    ForEach(viewModel.publishedEvents(events: viewModel.events.sorted(by: {$0.eventDate < $1.eventDate}))) { event in
+                    ForEach(viewModel.publishedEvents(events: viewModel.events)) { event in
                         CCFEventsCell(event: event)
-                    
                          //Presenting selected Event
                             .onTapGesture {
                                 viewModel.selectedEvent = event

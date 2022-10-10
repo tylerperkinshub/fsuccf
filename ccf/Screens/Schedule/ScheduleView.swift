@@ -11,15 +11,17 @@ struct ScheduleView: View {
     
     @StateObject var viewModel = ScheduleViewModel()
     
+    
     var body: some View {
         ZStack {
             NavigationView {
                 List {
-                    
-                    ForEach(viewModel.scheduledEvents, id: \.self) { event in
+                    ForEach(viewModel.scheduledEvents) { event in
                         CCFScheduleCell(event: event)
                     }
-                    .onDelete(perform: delete)
+                    .onDelete { (indexSet) in
+                        self.viewModel.delete(at: indexSet)
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 .edgesIgnoringSafeArea(.leading)
@@ -28,24 +30,11 @@ struct ScheduleView: View {
                 .background(Color("ccfBackground"))
             }
             .onAppear() {
-                
                 self.viewModel.getScheduledEvents()
             }
         }
     }
     
-    func delete(at offsets: IndexSet) {
-        
-        for i in offsets.makeIterator() {
-            let event = viewModel.scheduledEvents[i]
-            
-            PersistenceManager.updateWith(schedule: event, actionType: .remove) { error in
-                
-            }
-            
-        }
-        viewModel.getScheduledEvents()
-    }
 }
 
 struct ScheduleView_Previews: PreviewProvider {

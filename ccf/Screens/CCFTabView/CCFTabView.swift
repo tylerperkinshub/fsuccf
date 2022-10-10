@@ -26,14 +26,11 @@ struct CCFTabView: View {
                     Text("Events")
                 }
             
-
-            
             ScheduleView()
                 .tabItem {
                     Image(systemName: "alarm.fill")
                     Text("Reminders")
                 }
-            
         }
     }
 }

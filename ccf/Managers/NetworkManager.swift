@@ -11,15 +11,15 @@ final class NetworkManager {
     
     static let shared = NetworkManager()
     
-    
     private let cache = NSCache<NSString, UIImage>()
-    
     
     private init() {}
     
     
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void) {
-                let cacheKey = NSString(string: urlString)
+
+        // 
+        let cacheKey = NSString(string: urlString)
         
         // Grabbing from cache if possible.
         if let image = cache.object(forKey: cacheKey) {
@@ -47,9 +47,7 @@ final class NetworkManager {
             
         }
         
-        // Never forget. 
+        // Never forget.
         task.resume()
     }
-    
-    
 }

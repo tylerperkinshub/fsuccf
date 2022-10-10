@@ -13,6 +13,7 @@ final class ScheduleViewModel: ObservableObject {
     
     func getScheduledEvents() {
         PersistenceManager.retrieveScheduled { result in
+            
             switch result {
             case .success(let schedule):
                 if schedule.isEmpty {
@@ -32,7 +33,15 @@ final class ScheduleViewModel: ObservableObject {
     }
     
     func delete(at offsets: IndexSet) {
-        
+        for i in offsets.makeIterator() {
+            let event = scheduledEvents[i]
+            
+            PersistenceManager.updateWith(schedule: event, actionType: .remove) { error in
+                
+            }
+            
+        }
+        getScheduledEvents()
     }
     
 }

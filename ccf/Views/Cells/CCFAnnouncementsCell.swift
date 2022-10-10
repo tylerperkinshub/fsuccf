@@ -13,6 +13,7 @@ struct CCFAnnouncementsCell: View {
     
     var body: some View {
         VStack {
+            
             Text(dateFormatMMMd(date:announcement.date))
                 .frame(width: 314, height: 42, alignment: .topLeading)
                 .foregroundColor(Color("ccfPrimary"))
@@ -20,11 +21,13 @@ struct CCFAnnouncementsCell: View {
             
             
             ZStack {
+            
                 Rectangle()
                     .frame(width: 314, height: 214)
                     .foregroundColor(Color("ccfPrimary"))
                     .cornerRadius(12)
                 VStack() {
+                    
                     Rectangle()
                         .frame(width: 300, height: 4)
                         .foregroundColor(Color("ccfSecondary"))

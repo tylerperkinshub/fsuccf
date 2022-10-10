@@ -12,7 +12,9 @@ enum PersistenceActionType{
 }
 
 enum PersistenceManager {
+    
     static private let defaults = UserDefaults.standard
+    
     enum Keys { static let scheduled = "scheduled" }
     
     static func updateWith(schedule: Scheduled, actionType: PersistenceActionType, completed: @escaping (ccfError?) -> Void) {
@@ -30,7 +32,7 @@ enum PersistenceManager {
                     
                 case .remove:
                     scheduled.removeAll { $0.id == schedule.id }
-                    print("Scheduled event deleted: \(scheduled)")
+            
                 }
                 completed(save(scheduled: scheduled))
             
@@ -39,7 +41,7 @@ enum PersistenceManager {
                 
             }
         }
-}
+    }
     
     static func retrieveScheduled(completed: @escaping (Result<[Scheduled], ccfError>) -> Void) {
         

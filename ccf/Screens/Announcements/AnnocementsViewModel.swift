@@ -21,12 +21,18 @@ final class AnnouncementsViewModel: ObservableObject {
     // Setting single column for AnnouncementView
     let columns: [GridItem] = [GridItem(.flexible())]
     
+    var listener: ListenerRegistration?
+    
     // Configuring to firestore
     private var db = Firestore.firestore()
     
     // Calling out to Firebase for all announcements.
     func fetchData() {
-        db.collection("announcements").addSnapshotListener { snapshot, error in
+        
+        listener = db.collection("announcements").addSnapshotListener {  snapshot, error in
+        
+        
+        
             guard let documents = snapshot?.documents else {
                 return
             }
@@ -42,8 +48,18 @@ final class AnnouncementsViewModel: ObservableObject {
                 let url = data["url"] as? String ?? ""
                 
                 return Announcement(headline: headline, createdBy: createdBy, date: date, publishDate: publishDate, description: description, urlString: url)
+            
+            
             }
+            
         }
+        
+        
+        
+    }
+    
+    func customDeinit() {
+        listener?.remove()
     }
     
     // Making sure the Announcements are not published ahead of today's date.
@@ -63,6 +79,6 @@ final class AnnouncementsViewModel: ObservableObject {
             }
         }
         
-        return returnedAnnouncements
+        return returnedAnnouncements.sorted(by: {$0.date > $1.date})
     }
 }
